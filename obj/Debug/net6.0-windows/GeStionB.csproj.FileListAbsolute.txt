@@ -153,3 +153,9 @@ C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.pdb
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.genruntimeconfig.cache
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\ref\GeStionB.dll
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.ViewPatients.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Accueil.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.sourcelink.json
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Patients.PatientsDetails.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Patients.AddPatient.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medicaments.ViewMedicaments.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medicaments.AddMedicament.resources

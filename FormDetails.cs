@@ -29,5 +29,10 @@ namespace GeStionB
         {
 
         }
+
+        private void FormDetails_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

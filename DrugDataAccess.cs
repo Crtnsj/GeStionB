@@ -65,8 +65,6 @@ namespace GeStionB
             }
 
 
-
-
         }
     }
 }

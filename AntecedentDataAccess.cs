@@ -1,40 +1,40 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-
 
 namespace GeStionB
 {
-    internal class PatientDataAccess
+    internal class AntecedentDataAccess
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["localhost"].ConnectionString;
 
-        public DataTable GetPatientListFromDB()
+        public void FillComboBox(ComboBox comboBox)
         {
-            DataTable dataTable = new DataTable();
-
+           
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM patient";
+                string query = "SELECT libelle_a FROM antecedent;";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
+                    using (MySqlDataReader reader = command.ExecuteReader())
                     {
-                        adapter.Fill(dataTable);
+                        while (reader.Read())
+                        {
+                            string value = reader.GetString(0);
+                            comboBox.Items.Add(value);
+                        }
                     }
                 }
                 conn.Close();
             }
 
-            return dataTable;
+            
         }
     }
 }
-    
-

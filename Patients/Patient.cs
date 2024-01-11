@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeStionB
+namespace GeStionB.Patients
 {
     internal class Patient
     {
         private int _id { get; }
-        private String _nom { get; set; }
-        private String _prenom { get; set; }
-        private String _sexe { get; set; }
+        private string _nom { get; set; }
+        private string _prenom { get; set; }
+        private string _sexe { get; set; }
 
         public Patient(int id, string nom, string prenom, string sexe)
         {
-            this._id = id;
-            this._nom = nom;
-            this._prenom = prenom;
-            this._sexe = sexe;
+            _id = id;
+            _nom = nom;
+            _prenom = prenom;
+            _sexe = sexe;
         }
     }
 }
