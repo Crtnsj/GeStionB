@@ -1,4 +1,5 @@
-﻿using GeStionB.Patients;
+﻿using GeStionB.Antecedent;
+using GeStionB.Patients;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +18,16 @@ namespace GeStionB.Medicaments
         public AddMedicament()
         {
             InitializeComponent();
-            fillComboBox();
+            FillComboBox();
+            this.Activated += AddMedicament_Activated;
         }
-        private void fillComboBox()
+
+        private void AddMedicament_Activated(object sender, EventArgs e)
+        {
+            FillComboBox();
+        }
+    
+        public void FillComboBox()
         {
             dataAccess.FillComboBox(combo_Antecedent);
         }
@@ -32,8 +40,14 @@ namespace GeStionB.Medicaments
         private void Btn_AddMedicament_Ajouter_Click(object sender, EventArgs e)
         {
             MedicamentsDataAccess dataAccess = new MedicamentsDataAccess();
-            dataAccess.CreateMedicament( this.Box_AddMedicament_libelle.Text, this.combo_Antecedent.Text);
+            dataAccess.CreateMedicament(this.Box_AddMedicament_libelle.Text, this.combo_Antecedent.Text);
             this.Close();
+        }
+
+        private void btn_addMedicament_addCI_Click(object sender, EventArgs e)
+        {
+            AddAntecedent addAntecedent = new AddAntecedent();
+            addAntecedent.Show();
         }
     }
 }

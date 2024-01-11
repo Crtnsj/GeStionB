@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeStionB.Antecedent;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,7 +43,13 @@ namespace GeStionB.Patients
         {
             PatientDataAccess dataAccess = new PatientDataAccess();
             dataAccess.UpdatePatientInfo(Id, this.Box_change_nom.Text, this.Box_change_prenom.Text, this.combo_change_sexe.Text);
-            this.Close();  
+            this.Close();
+        }
+
+        private void btn_PatientsDetails_Antec_Click(object sender, EventArgs e)
+        {
+            ViewAntecedents viewAntecedents = new ViewAntecedents(Id);
+            viewAntecedents.Show();
         }
     }
 }

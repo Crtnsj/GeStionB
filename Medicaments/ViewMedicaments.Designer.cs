@@ -42,7 +42,7 @@
             MedicamentGridView.RowTemplate.Height = 45;
             MedicamentGridView.Size = new Size(1122, 823);
             MedicamentGridView.TabIndex = 0;
-            MedicamentGridView.CellContentClick += dataGridView1_CellContentClick;
+            MedicamentGridView.CellContentClick += MedicamentGridView_CellContentClick;
             // 
             // Button_addMedicament
             // 

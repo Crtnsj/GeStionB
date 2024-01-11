@@ -35,6 +35,8 @@
             sexe_label = new Label();
             combo_change_sexe = new ComboBox();
             User_change_button = new Button();
+            btn_PatientsDetails_Allergies = new Button();
+            btn_PatientsDetails_Antec = new Button();
             SuspendLayout();
             // 
             // nom_p_label
@@ -96,13 +98,34 @@
             User_change_button.TabIndex = 8;
             User_change_button.Text = "Valider les changements";
             User_change_button.UseVisualStyleBackColor = true;
-            User_change_button.Click += this.User_change_button_Click;
+            User_change_button.Click += User_change_button_Click;
+            // 
+            // btn_PatientsDetails_Allergies
+            // 
+            btn_PatientsDetails_Allergies.Location = new Point(600, 306);
+            btn_PatientsDetails_Allergies.Name = "btn_PatientsDetails_Allergies";
+            btn_PatientsDetails_Allergies.Size = new Size(260, 52);
+            btn_PatientsDetails_Allergies.TabIndex = 9;
+            btn_PatientsDetails_Allergies.Text = "Gerer les allergies";
+            btn_PatientsDetails_Allergies.UseVisualStyleBackColor = true;
+            // 
+            // btn_PatientsDetails_Antec
+            // 
+            btn_PatientsDetails_Antec.Location = new Point(600, 468);
+            btn_PatientsDetails_Antec.Name = "btn_PatientsDetails_Antec";
+            btn_PatientsDetails_Antec.Size = new Size(291, 52);
+            btn_PatientsDetails_Antec.TabIndex = 10;
+            btn_PatientsDetails_Antec.Text = "Gerer les antecedents";
+            btn_PatientsDetails_Antec.UseVisualStyleBackColor = true;
+            btn_PatientsDetails_Antec.Click += btn_PatientsDetails_Antec_Click;
             // 
             // PatientsDetails
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1061, 894);
+            Controls.Add(btn_PatientsDetails_Antec);
+            Controls.Add(btn_PatientsDetails_Allergies);
             Controls.Add(User_change_button);
             Controls.Add(combo_change_sexe);
             Controls.Add(sexe_label);
@@ -126,5 +149,7 @@
         private Label sexe_label;
         private ComboBox combo_change_sexe;
         private Button User_change_button;
+        private Button btn_PatientsDetails_Allergies;
+        private Button btn_PatientsDetails_Antec;
     }
 }

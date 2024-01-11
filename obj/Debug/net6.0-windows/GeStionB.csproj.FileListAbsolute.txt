@@ -139,8 +139,6 @@ C:\GeStionB\GeStionB\bin\Debug\net6.0-windows\runtimes\win-x64\native\krb5_64.dl
 C:\GeStionB\GeStionB\bin\Debug\net6.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\GeStionB\GeStionB\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.csproj.AssemblyReference.cache
-C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Form1.resources
-C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.FormDetails.resources
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.csproj.GenerateResource.cache
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.GeneratedMSBuildEditorConfig.editorconfig
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.AssemblyInfoInputs.cache
@@ -159,3 +157,6 @@ C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Patients.PatientsDetails.
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Patients.AddPatient.resources
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medicaments.ViewMedicaments.resources
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medicaments.AddMedicament.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medicaments.MedicamentsDetails.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Antecedent.AddAntecedent.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Antecedent.ViewAntecedents.resources
