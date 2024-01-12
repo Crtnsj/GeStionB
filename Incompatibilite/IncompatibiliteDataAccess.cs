@@ -33,22 +33,23 @@ namespace GeStionB.Incompatibilite
                 conn.Close();
             }
         }
-        public void FillDefaultValueComboxBoxMedicaments(int id_med)
-        {
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                conn.Open();
+        //public void FillDefaultValueComboxBoxMedicaments(int id_med)
+        //{
+ //           using (MySqlConnection conn = new MySqlConnection(connectionString))
+//            {
+//                conn.Open();
 
-                string query = "SELECT libelle_med FROM medicament WHERE medicament.id_med = (SELECT id_med_Medicament FROM incompatible WHERE incompatible.id_med = @id_med); ";
+ //               string query = "SELECT libelle_med FROM medicament WHERE medicament.id_med = (SELECT id_med_Medicament FROM incompatible WHERE incompatible.id_med = @id_med); ";
 
-                using (MySqlCommand command = new MySqlCommand(query, conn))
-                {
-                    command.Parameters.AddWithValue("@id_med", id_med);
-                    command.ExecuteNonQuery();
-                }
+//                using (MySqlCommand command = new MySqlCommand(query, conn))
+ //               {
+ //                   command.Parameters.AddWithValue("@id_med", id_med);
 
-                conn.Close();
-            }
-        }
+//                    command.ExecuteNonQuery();
+ //               }
+
+ //               conn.Close();
+ //           }
+ //       }
     }
 }

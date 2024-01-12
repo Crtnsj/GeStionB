@@ -22,6 +22,15 @@
     <Compile Update="Antecedent\ViewAntecedents.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Medecin\AddMedecin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Medecin\AdminValidation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Medecin\LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Medicaments\AddMedicament.cs">
       <SubType>Form</SubType>
     </Compile>

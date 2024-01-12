@@ -165,3 +165,7 @@ C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Allergies.ViewAllergies.r
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Allergies.AttributeAllergies.resources
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Allergies.AddAllergies.resources
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medicaments.ManageIncompatiblite.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medecin.LoginPage.resources
+C:\GeStionB\GeStionB\bin\Debug\net6.0-windows\BCrypt.Net-Next.dll
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medecin.AddMedecin.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medecin.AdminValidation.resources
