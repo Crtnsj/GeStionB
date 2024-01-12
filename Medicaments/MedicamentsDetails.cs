@@ -32,25 +32,30 @@ namespace GeStionB.Medicaments
         {
             FillComboBox();
         }
-    
+
         private void FillComboBox()
         {
             dataAccessAntecedent.FillComboBox(Combo_change_CI);
 
         }
 
-        private void btn_MedicamentsDetails_addCI_Click (object sender, EventArgs e)
+        private void btn_MedicamentsDetails_addCI_Click(object sender, EventArgs e)
         {
             AddAntecedent addAntecedent = new AddAntecedent();
             addAntecedent.Show();
         }
 
-        private void btn_MedicamentsDetails_Valid_Click (object sender, EventArgs e)
-        {   
+        private void btn_MedicamentsDetails_Valid_Click(object sender, EventArgs e)
+        {
             dataAccessMedicament.UpdateMedicamentInfo(Id, this.Box_change_libelle.Text, this.Combo_change_CI.Text);
             this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ManageIncompatiblite manageIcompatiblite = new ManageIncompatiblite(Id);
+            manageIcompatiblite.Show();
+        }
     }
-    
+
 }

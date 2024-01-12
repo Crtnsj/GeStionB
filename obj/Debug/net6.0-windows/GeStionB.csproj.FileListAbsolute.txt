@@ -160,3 +160,8 @@ C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medicaments.AddMedicament
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medicaments.MedicamentsDetails.resources
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Antecedent.AddAntecedent.resources
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Antecedent.ViewAntecedents.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Antecedent.AttributeAntecedent.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Allergies.ViewAllergies.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Allergies.AttributeAllergies.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Allergies.AddAllergies.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medicaments.ManageIncompatiblite.resources

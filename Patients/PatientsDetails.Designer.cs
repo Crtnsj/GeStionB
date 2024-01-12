@@ -108,6 +108,7 @@
             btn_PatientsDetails_Allergies.TabIndex = 9;
             btn_PatientsDetails_Allergies.Text = "Gerer les allergies";
             btn_PatientsDetails_Allergies.UseVisualStyleBackColor = true;
+            btn_PatientsDetails_Allergies.Click += btn_PatientsDetails_Allergies_Click;
             // 
             // btn_PatientsDetails_Antec
             // 

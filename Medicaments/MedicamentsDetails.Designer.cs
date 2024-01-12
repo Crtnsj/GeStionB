@@ -32,6 +32,7 @@
             Box_change_libelle = new TextBox();
             btn_MedicamentsDetails_addCI = new Button();
             btn_MedicamentsDetails_Valid = new Button();
+            btn_MNGIncompatibilite = new Button();
             SuspendLayout();
             // 
             // Combo_change_CI
@@ -67,13 +68,24 @@
             btn_MedicamentsDetails_Valid.TabIndex = 6;
             btn_MedicamentsDetails_Valid.Text = "Valider les modifications";
             btn_MedicamentsDetails_Valid.UseVisualStyleBackColor = true;
-            btn_MedicamentsDetails_Valid.Click += this.btn_MedicamentsDetails_Valid_Click;
+            btn_MedicamentsDetails_Valid.Click += btn_MedicamentsDetails_Valid_Click;
+            // 
+            // btn_MNGIncompatibilite
+            // 
+            btn_MNGIncompatibilite.Location = new Point(624, 324);
+            btn_MNGIncompatibilite.Name = "btn_MNGIncompatibilite";
+            btn_MNGIncompatibilite.Size = new Size(446, 52);
+            btn_MNGIncompatibilite.TabIndex = 7;
+            btn_MNGIncompatibilite.Text = "Gérer les incompatibilités";
+            btn_MNGIncompatibilite.UseVisualStyleBackColor = true;
+            btn_MNGIncompatibilite.Click += button1_Click;
             // 
             // MedicamentsDetails
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1298, 887);
+            Controls.Add(btn_MNGIncompatibilite);
             Controls.Add(btn_MedicamentsDetails_Valid);
             Controls.Add(btn_MedicamentsDetails_addCI);
             Controls.Add(Box_change_libelle);
@@ -90,5 +102,6 @@
         private TextBox Box_change_libelle;
         private Button btn_MedicamentsDetails_addCI;
         private Button btn_MedicamentsDetails_Valid;
+        private Button btn_MNGIncompatibilite;
     }
 }

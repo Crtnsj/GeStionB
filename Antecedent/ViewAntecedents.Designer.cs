@@ -30,6 +30,7 @@ namespace GeStionB.Antecedent
         private void InitializeComponent()
         {
             Grid_Antecedent = new DataGridView();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)Grid_Antecedent).BeginInit();
             SuspendLayout();
             // 
@@ -43,11 +44,22 @@ namespace GeStionB.Antecedent
             Grid_Antecedent.Size = new Size(911, 719);
             Grid_Antecedent.TabIndex = 0;
             // 
+            // button1
+            // 
+            button1.Location = new Point(513, 799);
+            button1.Name = "button1";
+            button1.Size = new Size(406, 52);
+            button1.TabIndex = 1;
+            button1.Text = "Attribuer un nouvel antecedent";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // ViewAntecedents
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1015, 820);
+            ClientSize = new Size(1017, 884);
+            Controls.Add(button1);
             Controls.Add(Grid_Antecedent);
             Name = "ViewAntecedents";
             Text = "ViewAntecedents";
@@ -57,6 +69,7 @@ namespace GeStionB.Antecedent
         }
 
         private DataGridView Grid_Antecedent;
+        private Button button1;
     }
     #endregion
 }

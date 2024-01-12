@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Crypto;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -7,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeStionB.Antecedent
+namespace GeStionB.Allergies
 {
-    internal class AntecedentDataAccess
+    internal class AllergiesDataAccess
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["localhost"].ConnectionString;
 
@@ -19,11 +20,11 @@ namespace GeStionB.Antecedent
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT libelle_a FROM antecedent;";
+                string query = "SELECT libelle_al FROM allergie;";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     using (MySqlDataReader reader = command.ExecuteReader())
-                    {   
+                    {
                         comboBox.Items.Clear();
                         while (reader.Read())
                         {
@@ -37,28 +38,28 @@ namespace GeStionB.Antecedent
 
 
         }
-        public void CreateAntecedent(string libelle)
+        public void CreateAllergie(string libelle)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "INSERT INTO antecedent (id_a, libelle_a) VALUES (NULL, @libelle_a); ";
+                string query = "INSERT INTO allergie (id_al, libelle_al) VALUES (NULL, @libelle_al); ";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
-                    command.Parameters.AddWithValue("@libelle_a", libelle);
+                    command.Parameters.AddWithValue("@libelle_al", libelle);
                     command.ExecuteNonQuery();
                 }
                 conn.Close();
             }
         }
-        public DataTable GetAntecedentListFromDB(int id_p)
+        public DataTable GetAllergieListFromDB(int id_p)
         {
             DataTable dataTable = new DataTable();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT * FROM antecedent WHERE id_a IN (SELECT id_a FROM a_eu WHERE id_p = @id_patient);";
+                string query = "SELECT * FROM allergie WHERE id_al IN (SELECT id_al FROM est WHERE id_p = @id_patient);";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@id_patient", id_p);
@@ -72,21 +73,21 @@ namespace GeStionB.Antecedent
 
             return dataTable;
         }
-        public void AttributeAntecedent(int id_p, string libelle_a)
+        public void AttributeAllergie(int id_p, string libelle)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "INSERT INTO a_eu (id_a, id_p) VALUES ((SELECT id_a FROM antecedent WHERE antecedent.libelle_a = @libelle_a), @id_p)";
+                string query = "INSERT INTO `est` (`id_al`, `id_p`) VALUES((SELECT id_al FROM allergie WHERE allergie.libelle_al = @libelle_al), @id_p)";
+                
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@id_p", id_p);
-                    command.Parameters.AddWithValue("@libelle_a", libelle_a);
+                    command.Parameters.AddWithValue("@libelle_al", libelle);
                     command.ExecuteNonQuery();
                 }
                 conn.Close();
             }
         }
-
     }
 }

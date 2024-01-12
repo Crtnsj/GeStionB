@@ -4,13 +4,28 @@
     <Compile Update="Accueil.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Allergies\AddAllergies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Allergies\AttributeAllergies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Allergies\ViewAllergies.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Antecedent\AddAntecedent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Antecedent\AttributeAntecedent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Antecedent\ViewAntecedents.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Medicaments\AddMedicament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Incompatibilite\ManageIncompatiblite.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Medicaments\MedicamentsDetails.cs">

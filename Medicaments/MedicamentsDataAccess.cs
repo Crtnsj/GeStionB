@@ -21,7 +21,7 @@ namespace GeStionB.Medicaments
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT id_med As ID, libelle_med As Libelle , contre_indication As 'Contre indication' FROM medicament;";
+                string query = "SELECT id_med AS ID, libelle_med AS Libelle, (SELECT libelle_a FROM antecedent WHERE antecedent.id_a = medicament.id_a) AS 'Contre indication' FROM medicament;";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
@@ -39,7 +39,7 @@ namespace GeStionB.Medicaments
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "INSERT INTO medicament (id_med, libelle_med, contre_indication) VALUES (NULL, @libelle_med, @CI); ";
+                string query = "INSERT INTO medicament (id_med, libelle_med, id_a) VALUES (NULL, @libelle_med, (SELECT id_a FROM antecedent WHERE libelle_a = @CI)); ";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@libelle_med", libelle);
@@ -54,7 +54,7 @@ namespace GeStionB.Medicaments
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "UPDATE medicament SET libelle_med = @libelle , contre_indication = @CI WHERE medicament.id_med = @id; ";
+                string query = "UPDATE medicament SET libelle_med = @libelle, id_a = (SELECT id_a FROM antecedent WHERE libelle_a = @CI) WHERE id_med = @id;";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@libelle", libelle);
@@ -64,6 +64,30 @@ namespace GeStionB.Medicaments
                 }
                 conn.Close();
             }
+        }
+        public void FillComboBox(ComboBox comboBox)
+        {
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT libelle_med FROM medicament;";
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        comboBox.Items.Clear();
+                        while (reader.Read())
+                        {
+                            string value = reader.GetString(0);
+                            comboBox.Items.Add(value);
+                        }
+                    }
+                }
+                conn.Close();
+            }
+
+
         }
     }
 }

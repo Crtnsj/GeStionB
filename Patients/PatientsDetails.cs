@@ -1,4 +1,5 @@
-﻿using GeStionB.Antecedent;
+﻿using GeStionB.Allergies;
+using GeStionB.Antecedent;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,6 +50,12 @@ namespace GeStionB.Patients
         private void btn_PatientsDetails_Antec_Click(object sender, EventArgs e)
         {
             ViewAntecedents viewAntecedents = new ViewAntecedents(Id);
+            viewAntecedents.Show();
+        }
+
+        private void btn_PatientsDetails_Allergies_Click(object sender, EventArgs e)
+        {
+            ViewAllergies viewAntecedents = new ViewAllergies(Id);
             viewAntecedents.Show();
         }
     }
