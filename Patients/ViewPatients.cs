@@ -28,7 +28,7 @@ namespace GeStionB
         }
 
 
-        private string connectionString = ConfigurationManager.ConnectionStrings["localhost"].ConnectionString;
+        
 
         public void updateDataGridView()
         {

@@ -1,4 +1,5 @@
 ﻿using GeStionB.Medicaments;
+using GeStionB.Ordonnances;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,18 @@ namespace GeStionB
         {
             ViewMedicaments viewMedicaments = new ViewMedicaments();
             viewMedicaments.Show();
+        }
+
+        private void gererLesOrdonnacToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewOrdonnances viewOrdonnances = new ViewOrdonnances();
+            viewOrdonnances.Show();
+        }
+       
+
+        private void Accueil_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

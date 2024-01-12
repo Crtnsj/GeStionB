@@ -17,12 +17,13 @@ namespace GeStionB.Medicaments
     {
         int Id { get; set; }
        
-
+        IncompatibiliteDataAccess dataAccessIncompatibilite = new IncompatibiliteDataAccess();
         public ManageIncompatiblite(int id)
         {
             InitializeComponent();
             this.Id = id;
             this.Activated += ManageMedicament_Activated;
+            
             
 
         }
@@ -34,26 +35,31 @@ namespace GeStionB.Medicaments
             FillComboBoxMedicaments();
         }
 
-        public void FillComboBoxAntecedents()
+
+
+        public void FillComboBoxMedicaments()
         {
-            AntecedentDataAccess dataAccess = new AntecedentDataAccess();
-            dataAccess.FillComboBox(combo_antecedents);
+            MedicamentsDataAccess dataAccess = new MedicamentsDataAccess();
+            dataAccess.FillComboBox(combo_Medicaments); 
+            this.combo_Medicaments.Text = dataAccessIncompatibilite.FillDefaultValueComboxBoxMedicaments(Id);
         }
         public void FillComboBoxAllergies()
         {
             AllergiesDataAccess dataAccess = new AllergiesDataAccess();
             dataAccess.FillComboBox(combo_allergie);
+            this.combo_allergie.Text = dataAccessIncompatibilite.FillDefaultValueComboxBoxAllergies(Id);
         }
-        public void FillComboBoxMedicaments()
+        public void FillComboBoxAntecedents()
         {
-            MedicamentsDataAccess dataAccess = new MedicamentsDataAccess();
-            dataAccess.FillComboBox(combo_Medicaments);
+            AntecedentDataAccess dataAccess = new AntecedentDataAccess();
+            dataAccess.FillComboBox(combo_antecedents);
+            this.combo_antecedents.Text = dataAccessIncompatibilite.FillDefaultValueComboxBoxAntecedents(Id);
         }
 
         public void btn_Incompatibilite_valid_Click(object sender, EventArgs e)
         {
-            IncompatibiliteDataAccess dataAccess = new IncompatibiliteDataAccess();
-            dataAccess.CreateIncompatibilite(this.combo_antecedents.Text,Id,this.combo_allergie.Text, this.combo_Medicaments.Text);
+            
+            dataAccessIncompatibilite.CreateIncompatibilite(this.combo_antecedents.Text,Id,this.combo_allergie.Text, this.combo_Medicaments.Text);
             MessageBox.Show("Modification prise en compte");
         }
     }

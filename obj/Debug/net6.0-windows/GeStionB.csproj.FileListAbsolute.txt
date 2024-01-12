@@ -169,3 +169,5 @@ C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medecin.LoginPage.resourc
 C:\GeStionB\GeStionB\bin\Debug\net6.0-windows\BCrypt.Net-Next.dll
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medecin.AddMedecin.resources
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medecin.AdminValidation.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Ordonnances.ViewOrdonnances.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Ordonnances.OrdonnancesDetails.resources

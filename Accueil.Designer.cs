@@ -47,7 +47,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(36, 36);
-            menuStrip1.Location = new Point(0, 47);
+            menuStrip1.Location = new Point(0, 45);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1786, 24);
             menuStrip1.TabIndex = 2;
@@ -59,27 +59,28 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { gererLesPatiensToolStripMenuItem, gererLesOrdonnacToolStripMenuItem, gererLesMedicamentsToolStripMenuItem });
             menuStrip2.Location = new Point(0, 0);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(1786, 47);
+            menuStrip2.Size = new Size(1786, 45);
             menuStrip2.TabIndex = 3;
             menuStrip2.Text = "menuStrip2";
             // 
             // gererLesPatiensToolStripMenuItem
             // 
             gererLesPatiensToolStripMenuItem.Name = "gererLesPatiensToolStripMenuItem";
-            gererLesPatiensToolStripMenuItem.Size = new Size(236, 43);
+            gererLesPatiensToolStripMenuItem.Size = new Size(236, 41);
             gererLesPatiensToolStripMenuItem.Text = "Gerer les patiens";
             gererLesPatiensToolStripMenuItem.Click += gererLesPatiensToolStripMenuItem_Click;
             // 
             // gererLesOrdonnacToolStripMenuItem
             // 
             gererLesOrdonnacToolStripMenuItem.Name = "gererLesOrdonnacToolStripMenuItem";
-            gererLesOrdonnacToolStripMenuItem.Size = new Size(303, 43);
+            gererLesOrdonnacToolStripMenuItem.Size = new Size(303, 41);
             gererLesOrdonnacToolStripMenuItem.Text = "Gerer les ordonnances";
+            gererLesOrdonnacToolStripMenuItem.Click += gererLesOrdonnacToolStripMenuItem_Click;
             // 
             // gererLesMedicamentsToolStripMenuItem
             // 
             gererLesMedicamentsToolStripMenuItem.Name = "gererLesMedicamentsToolStripMenuItem";
-            gererLesMedicamentsToolStripMenuItem.Size = new Size(308, 43);
+            gererLesMedicamentsToolStripMenuItem.Size = new Size(308, 41);
             gererLesMedicamentsToolStripMenuItem.Text = "Gerer les medicaments";
             gererLesMedicamentsToolStripMenuItem.Click += gererLesMedicamentsToolStripMenuItem_Click;
             // 
@@ -93,6 +94,7 @@
             MainMenuStrip = menuStrip1;
             Name = "Accueil";
             Text = "Accueil";
+            FormClosing += Accueil_FormClosing;
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();
             ResumeLayout(false);

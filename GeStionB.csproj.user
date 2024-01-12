@@ -43,6 +43,12 @@
     <Compile Update="Medicaments\ViewMedicaments.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Ordonnances\OrdonnancesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ordonnances\ViewOrdonnances.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Patients\AddPatient.cs">
       <SubType>Form</SubType>
     </Compile>
