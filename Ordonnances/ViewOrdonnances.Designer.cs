@@ -41,6 +41,7 @@
             gridOrdonnance.RowTemplate.Height = 45;
             gridOrdonnance.Size = new Size(1304, 838);
             gridOrdonnance.TabIndex = 0;
+            gridOrdonnance.CellContentClick += gridOrdonnance_CellContentClick;
             // 
             // ViewOrdonnances
             // 

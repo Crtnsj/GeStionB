@@ -66,6 +66,30 @@ namespace GeStionB.Patients
                 conn.Close();
             }
         }
+        public void FillComboBox(ComboBox comboBox)
+        {
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT nom_p FROM patient;";
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        comboBox.Items.Clear();
+                        while (reader.Read())
+                        {
+                            string value = reader.GetString(0);
+                            comboBox.Items.Add(value);
+                        }
+                    }
+                }
+                conn.Close();
+            }
+
+
+        }
     }
 }
 

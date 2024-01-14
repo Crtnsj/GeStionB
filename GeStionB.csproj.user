@@ -43,6 +43,9 @@
     <Compile Update="Medicaments\ViewMedicaments.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Ordonnances\AddOrdonnance.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Ordonnances\OrdonnancesDetails.cs">
       <SubType>Form</SubType>
     </Compile>

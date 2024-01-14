@@ -29,13 +29,22 @@
         private void InitializeComponent()
         {
             btnCreatePDF = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox3 = new ComboBox();
+            boxPosologie = new TextBox();
+            boxDate = new TextBox();
+            boxDuree = new TextBox();
+            boxInstructions = new TextBox();
+            comboMedicament = new ComboBox();
+            comboPatient = new ComboBox();
+            comboMedecin = new ComboBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            boxId = new TextBox();
+            label8 = new Label();
             SuspendLayout();
             // 
             // btnCreatePDF
@@ -46,71 +55,163 @@
             btnCreatePDF.TabIndex = 0;
             btnCreatePDF.Text = "Generer le PDF";
             btnCreatePDF.UseVisualStyleBackColor = true;
+            btnCreatePDF.Click += btnCreatePDF_Click;
             // 
-            // textBox1
+            // boxPosologie
             // 
-            textBox1.Location = new Point(126, 133);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(225, 43);
-            textBox1.TabIndex = 1;
+            boxPosologie.Location = new Point(108, 146);
+            boxPosologie.Name = "boxPosologie";
+            boxPosologie.Size = new Size(225, 43);
+            boxPosologie.TabIndex = 1;
             // 
-            // textBox2
+            // boxDate
             // 
-            textBox2.Location = new Point(509, 146);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(225, 43);
-            textBox2.TabIndex = 2;
+            boxDate.Location = new Point(466, 146);
+            boxDate.Name = "boxDate";
+            boxDate.ReadOnly = true;
+            boxDate.Size = new Size(225, 43);
+            boxDate.TabIndex = 2;
             // 
-            // textBox3
+            // boxDuree
             // 
-            textBox3.Location = new Point(888, 159);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(225, 43);
-            textBox3.TabIndex = 3;
+            boxDuree.Location = new Point(888, 159);
+            boxDuree.Name = "boxDuree";
+            boxDuree.Size = new Size(225, 43);
+            boxDuree.TabIndex = 3;
             // 
-            // textBox4
+            // boxInstructions
             // 
-            textBox4.Location = new Point(344, 339);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(225, 43);
-            textBox4.TabIndex = 4;
+            boxInstructions.Location = new Point(113, 344);
+            boxInstructions.Name = "boxInstructions";
+            boxInstructions.Size = new Size(225, 43);
+            boxInstructions.TabIndex = 4;
             // 
-            // comboBox1
+            // comboMedicament
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(108, 451);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(272, 45);
-            comboBox1.TabIndex = 5;
+            comboMedicament.FormattingEnabled = true;
+            comboMedicament.Location = new Point(113, 468);
+            comboMedicament.Name = "comboMedicament";
+            comboMedicament.Size = new Size(272, 45);
+            comboMedicament.TabIndex = 5;
             // 
-            // comboBox2
+            // comboPatient
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(496, 451);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(272, 45);
-            comboBox2.TabIndex = 6;
+            comboPatient.FormattingEnabled = true;
+            comboPatient.Location = new Point(481, 468);
+            comboPatient.Name = "comboPatient";
+            comboPatient.Size = new Size(272, 45);
+            comboPatient.TabIndex = 6;
             // 
-            // comboBox3
+            // comboMedecin
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(860, 451);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(272, 45);
-            comboBox3.TabIndex = 7;
+            comboMedecin.FormattingEnabled = true;
+            comboMedecin.Location = new Point(854, 468);
+            comboMedecin.Name = "comboMedecin";
+            comboMedecin.Size = new Size(272, 45);
+            comboMedecin.TabIndex = 7;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(113, 82);
+            label1.Name = "label1";
+            label1.Size = new Size(134, 37);
+            label1.TabIndex = 8;
+            label1.Text = "Posologie";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(466, 68);
+            label2.Name = "label2";
+            label2.Size = new Size(213, 37);
+            label2.TabIndex = 9;
+            label2.Text = "Date de création";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(837, 92);
+            label3.Name = "label3";
+            label3.Size = new Size(357, 37);
+            label3.TabIndex = 10;
+            label3.Text = "Durée du traitement en jours";
+            label3.Click += label3_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(113, 281);
+            label4.Name = "label4";
+            label4.Size = new Size(269, 37);
+            label4.TabIndex = 11;
+            label4.Text = "Instruction spécifique";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(113, 411);
+            label5.Name = "label5";
+            label5.Size = new Size(259, 37);
+            label5.TabIndex = 12;
+            label5.Text = "Medicament prescrit";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(481, 411);
+            label6.Name = "label6";
+            label6.Size = new Size(99, 37);
+            label6.TabIndex = 13;
+            label6.Text = "Patient";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(854, 411);
+            label7.Name = "label7";
+            label7.Size = new Size(119, 37);
+            label7.TabIndex = 14;
+            label7.Text = "Medecin";
+            // 
+            // boxId
+            // 
+            boxId.Location = new Point(466, 344);
+            boxId.Name = "boxId";
+            boxId.ReadOnly = true;
+            boxId.Size = new Size(225, 43);
+            boxId.TabIndex = 15;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(466, 281);
+            label8.Name = "label8";
+            label8.Size = new Size(138, 37);
+            label8.TabIndex = 16;
+            label8.Text = "Identifiant";
             // 
             // OrdonnancesDetails
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1221, 782);
-            Controls.Add(comboBox3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(label8);
+            Controls.Add(boxId);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(comboMedecin);
+            Controls.Add(comboPatient);
+            Controls.Add(comboMedicament);
+            Controls.Add(boxInstructions);
+            Controls.Add(boxDuree);
+            Controls.Add(boxDate);
+            Controls.Add(boxPosologie);
             Controls.Add(btnCreatePDF);
             Name = "OrdonnancesDetails";
             Text = "OrdonnancesDetails";
@@ -121,12 +222,21 @@
         #endregion
 
         private Button btnCreatePDF;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
+        private TextBox boxPosologie;
+        private TextBox boxDate;
+        private TextBox boxDuree;
+        private TextBox boxInstructions;
+        private ComboBox comboMedicament;
+        private ComboBox comboPatient;
+        private ComboBox comboMedecin;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private TextBox boxId;
+        private Label label8;
     }
 }

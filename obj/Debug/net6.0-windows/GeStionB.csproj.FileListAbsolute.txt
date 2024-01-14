@@ -171,3 +171,6 @@ C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medecin.AddMedecin.resour
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Medecin.AdminValidation.resources
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Ordonnances.ViewOrdonnances.resources
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Ordonnances.OrdonnancesDetails.resources
+C:\GeStionB\GeStionB\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\GeStionB\GeStionB\bin\Debug\net6.0-windows\itextsharp.dll
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Ordonnances.addOrdonnance.resources

@@ -23,9 +23,6 @@ namespace GeStionB.Medicaments
             InitializeComponent();
             this.Id = id;
             this.Activated += ManageMedicament_Activated;
-            
-            
-
         }
 
         private void ManageMedicament_Activated(object sender, EventArgs e)
