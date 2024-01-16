@@ -78,6 +78,28 @@ namespace GeStionB.Medecin
 
 
         }
-
+        public string GetNameOfMedecin(string login_m)
+        {
+            string nom_m = "";
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT nom_m FROM medecin WHERE login_m = @login_m;";
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@login_m", login_m);
+                    command.ExecuteNonQuery();
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            nom_m = reader.GetString(0);
+                        }
+                    }
+                }
+                conn.Close();
+            }
+            return nom_m;
+        }
     }
 }

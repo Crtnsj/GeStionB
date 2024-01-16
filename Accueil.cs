@@ -14,9 +14,11 @@ namespace GeStionB
 {
     public partial class Accueil : Form
     {
-        public Accueil()
+        string nom_m = "";
+        public Accueil(string nom_m)
         {
             InitializeComponent();
+            this.nom_m = nom_m;
         }
 
 
@@ -35,14 +37,19 @@ namespace GeStionB
 
         private void gererLesOrdonnacToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ViewOrdonnances viewOrdonnances = new ViewOrdonnances();
+            ViewOrdonnances viewOrdonnances = new ViewOrdonnances(nom_m);
             viewOrdonnances.Show();
         }
-       
+
 
         private void Accueil_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

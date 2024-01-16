@@ -84,7 +84,7 @@
             // combo_change_sexe
             // 
             combo_change_sexe.FormattingEnabled = true;
-            combo_change_sexe.Items.AddRange(new object[] { "M", "F" });
+            combo_change_sexe.Items.AddRange(new object[] { "H", "F" });
             combo_change_sexe.Location = new Point(143, 639);
             combo_change_sexe.Name = "combo_change_sexe";
             combo_change_sexe.Size = new Size(279, 45);

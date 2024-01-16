@@ -106,7 +106,7 @@
             btn_Incompatibilite_valid.TabIndex = 10;
             btn_Incompatibilite_valid.Text = "Valider l'incompatibilité";
             btn_Incompatibilite_valid.UseVisualStyleBackColor = true;
-            btn_Incompatibilite_valid.Click += this.btn_Incompatibilite_valid_Click;
+            btn_Incompatibilite_valid.Click += btn_Incompatibilite_valid_Click;
             // 
             // ManageIncompatiblite
             // 

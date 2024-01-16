@@ -37,8 +37,9 @@
             box_posologie = new TextBox();
             box_duree = new TextBox();
             box_instructions = new TextBox();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            comboPatient = new ComboBox();
+            comboMedicament = new ComboBox();
+            label6 = new Label();
             SuspendLayout();
             // 
             // btn_AddOrdonnance
@@ -49,6 +50,7 @@
             btn_AddOrdonnance.TabIndex = 0;
             btn_AddOrdonnance.Text = "Valider la création";
             btn_AddOrdonnance.UseVisualStyleBackColor = true;
+            btn_AddOrdonnance.Click += btn_AddOrdonnance_Click;
             // 
             // label1
             // 
@@ -89,7 +91,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(448, 420);
+            label5.Location = new Point(558, 463);
             label5.Name = "label5";
             label5.Size = new Size(165, 37);
             label5.TabIndex = 5;
@@ -116,29 +118,38 @@
             box_instructions.Size = new Size(225, 43);
             box_instructions.TabIndex = 8;
             // 
-            // comboBox1
+            // comboPatient
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(118, 484);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(272, 45);
-            comboBox1.TabIndex = 9;
+            comboPatient.FormattingEnabled = true;
+            comboPatient.Location = new Point(115, 532);
+            comboPatient.Name = "comboPatient";
+            comboPatient.Size = new Size(272, 45);
+            comboPatient.TabIndex = 9;
             // 
-            // comboBox2
+            // comboMedicament
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(463, 489);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(272, 45);
-            comboBox2.TabIndex = 10;
+            comboMedicament.FormattingEnabled = true;
+            comboMedicament.Location = new Point(573, 532);
+            comboMedicament.Name = "comboMedicament";
+            comboMedicament.Size = new Size(272, 45);
+            comboMedicament.TabIndex = 10;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(573, 332);
+            label6.Name = "label6";
+            label6.Size = new Size(0, 37);
+            label6.TabIndex = 11;
             // 
             // addOrdonnance
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1460, 978);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(label6);
+            Controls.Add(comboMedicament);
+            Controls.Add(comboPatient);
             Controls.Add(box_instructions);
             Controls.Add(box_duree);
             Controls.Add(box_posologie);
@@ -165,7 +176,8 @@
         private TextBox box_posologie;
         private TextBox box_duree;
         private TextBox box_instructions;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox comboPatient;
+        private ComboBox comboMedicament;
+        private Label label6;
     }
 }

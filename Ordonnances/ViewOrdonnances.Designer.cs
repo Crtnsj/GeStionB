@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             gridOrdonnance = new DataGridView();
+            btn_AddOrdonnance = new Button();
             ((System.ComponentModel.ISupportInitialize)gridOrdonnance).BeginInit();
             SuspendLayout();
             // 
@@ -43,11 +44,22 @@
             gridOrdonnance.TabIndex = 0;
             gridOrdonnance.CellContentClick += gridOrdonnance_CellContentClick;
             // 
+            // btn_AddOrdonnance
+            // 
+            btn_AddOrdonnance.Location = new Point(1055, 940);
+            btn_AddOrdonnance.Name = "btn_AddOrdonnance";
+            btn_AddOrdonnance.Size = new Size(309, 52);
+            btn_AddOrdonnance.TabIndex = 1;
+            btn_AddOrdonnance.Text = "Creer une ordonnance";
+            btn_AddOrdonnance.UseVisualStyleBackColor = true;
+            btn_AddOrdonnance.Click += btn_AddOrdonnance_Click;
+            // 
             // ViewOrdonnances
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1440, 953);
+            ClientSize = new Size(1440, 1042);
+            Controls.Add(btn_AddOrdonnance);
             Controls.Add(gridOrdonnance);
             Name = "ViewOrdonnances";
             Text = "ViewOrdonnances";
@@ -58,5 +70,6 @@
         #endregion
 
         private DataGridView gridOrdonnance;
+        private Button btn_AddOrdonnance;
     }
 }

@@ -25,14 +25,14 @@ namespace GeStionB.Ordonnances
             this.boxInstructions.Text = instruction;
             FillComboBoxMedicaments(libelle_med);
             FillComboBoxPatients(nom_p);
-            FillComboBoxMedecins(nom_m); 
+            FillComboBoxMedecins(nom_m);
         }
 
         public void FillComboBoxMedicaments(string libelle_med)
         {
             MedicamentsDataAccess dataAccessMedicament = new MedicamentsDataAccess();
             dataAccessMedicament.FillComboBox(comboMedicament);
-            
+
             this.comboMedicament.Text = libelle_med;
         }
         public void FillComboBoxPatients(string nom_p)
@@ -55,17 +55,19 @@ namespace GeStionB.Ordonnances
 
         private void btnCreatePDF_Click(object sender, EventArgs e)
         {
-            
+
             using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
             {
                 if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                 {
-                    
+
                     string selectedFolder = folderBrowserDialog.SelectedPath;
                     PdfCreator pdfCreator = new PdfCreator();
-                    pdfCreator.CreatePDF(selectedFolder, this.boxId.Text, this.comboMedecin.Text, this.boxDate.Text, this.comboPatient.Text, this.comboMedicament.Text,this.boxPosologie.Text, this.boxDuree.Text,this.boxInstructions.Text);
+                    pdfCreator.CreatePDF(selectedFolder, this.boxId.Text, this.comboMedecin.Text, this.boxDate.Text, this.comboPatient.Text, this.comboMedicament.Text, this.boxPosologie.Text, this.boxDuree.Text, this.boxInstructions.Text);
                 }
             }
         }
+
+
     }
 }

@@ -109,6 +109,7 @@
             comboMedecin.Name = "comboMedecin";
             comboMedecin.Size = new Size(272, 45);
             comboMedecin.TabIndex = 7;
+   
             // 
             // label1
             // 

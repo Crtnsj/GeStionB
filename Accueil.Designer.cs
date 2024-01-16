@@ -95,6 +95,7 @@
             Name = "Accueil";
             Text = "Accueil";
             FormClosing += Accueil_FormClosing;
+            Load += Accueil_Load;
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();
             ResumeLayout(false);

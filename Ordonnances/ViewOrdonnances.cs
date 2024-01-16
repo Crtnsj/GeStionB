@@ -15,11 +15,13 @@ namespace GeStionB.Ordonnances
     public partial class ViewOrdonnances : Form
     {
         OrdonnancesDataAccess dataAccess = new OrdonnancesDataAccess();
-        public ViewOrdonnances()
+        string nom_m = "";
+        public ViewOrdonnances(string nom_m)
         {
             InitializeComponent();
             updateDataGridView();
             this.Activated += ViewOrdonnances_Activated;
+            this.nom_m = nom_m;
         }
 
         private void ViewOrdonnances_Activated(object sender, EventArgs e)
@@ -38,7 +40,7 @@ namespace GeStionB.Ordonnances
 
         private void gridOrdonnance_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow selectedRow = this.gridOrdonnance.Rows[e.RowIndex];
@@ -52,10 +54,16 @@ namespace GeStionB.Ordonnances
                 string libelle_med = selectedRow.Cells["Medicament Prescrit"].Value.ToString();
 
 
-                OrdonnancesDetails ordonnancesDetails = new OrdonnancesDetails(id_o,posologie,date,duree,instructions,nom_m,nom_p,libelle_med);
+                OrdonnancesDetails ordonnancesDetails = new OrdonnancesDetails(id_o, posologie, date, duree, instructions, nom_m, nom_p, libelle_med);
                 ordonnancesDetails.Show();
             }
-            
+
+        }
+
+        private void btn_AddOrdonnance_Click(object sender, EventArgs e)
+        {
+            addOrdonnance addOrdonnance = new addOrdonnance(nom_m);
+            addOrdonnance.Show();
         }
     }
 }

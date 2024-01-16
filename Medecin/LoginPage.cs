@@ -13,6 +13,7 @@ namespace GeStionB.Medecin
 {
     public partial class LoginPage : Form
     {
+        
         public LoginPage()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace GeStionB.Medecin
         {
             MedecinDataAccess dataAccess = new MedecinDataAccess();
             string hash = dataAccess.GetHashForAuthentification(this.Box_Login_Username.Text);
-
+            string nom_m = dataAccess.GetNameOfMedecin(this.Box_Login_Username.Text);
             if (hash != null)
             {
                 
@@ -30,7 +31,7 @@ namespace GeStionB.Medecin
                 bool result = bcrypt.Descryption(this.Box_Login_Password.Text, hash);
                 if (result)
                 {
-                    Accueil accueil = new Accueil();
+                    Accueil accueil = new Accueil(nom_m);
                     this.Hide();
                     accueil.Show();
                 }
