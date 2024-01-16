@@ -16,13 +16,14 @@ namespace GeStionB.Patients
     public partial class PatientsDetails : Form
     {
         public int Id { get; set; }
-        public PatientsDetails(int id, string nom, string prenom, string sex)
+        public PatientsDetails(int id, string nom, string prenom, string sex, string birthday)
         {
             InitializeComponent();
             this.Id = id;
             this.Box_change_nom.Text = nom;
             this.Box_change_prenom.Text = prenom;
             this.combo_change_sexe.Text = sex;
+            this.date_PatientDetails.Text = birthday;
         }
 
         private void PatientsDatails_Load(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace GeStionB.Patients
         private void User_change_button_Click(object sender, EventArgs e)
         {
             PatientDataAccess dataAccess = new PatientDataAccess();
-            dataAccess.UpdatePatientInfo(Id, this.Box_change_nom.Text, this.Box_change_prenom.Text, this.combo_change_sexe.Text);
+            dataAccess.UpdatePatientInfo(Id, this.Box_change_nom.Text, this.Box_change_prenom.Text, this.combo_change_sexe.Text,this.date_PatientDetails.Text);
             this.Close();
         }
 

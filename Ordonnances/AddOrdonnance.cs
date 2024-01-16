@@ -19,6 +19,8 @@ namespace GeStionB.Ordonnances
         {
             this.nom_m = nom_m;
             InitializeComponent();
+            FillComboBoxMedicaments();
+            FillComboBoxPatients();
             
         }
         public void FillComboBoxMedicaments()

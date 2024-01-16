@@ -45,8 +45,8 @@ namespace GeStionB
                 string nom = selectedRow.Cells["nom"].Value.ToString();
                 string prenom = selectedRow.Cells["prenom"].Value.ToString();
                 string sexe = selectedRow.Cells["sexe"].Value.ToString();
-
-                PatientsDetails patientDetail = new PatientsDetails(id, nom, prenom, sexe);
+                string birthday = selectedRow.Cells["Date de naissance"].Value.ToString();
+                PatientsDetails patientDetail = new PatientsDetails(id, nom, prenom, sexe, birthday);
                 patientDetail.Show();
             }
         }

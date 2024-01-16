@@ -58,7 +58,7 @@
             btn_MedicamentsDetails_addCI.TabIndex = 5;
             btn_MedicamentsDetails_addCI.Text = "Ajouter une contre indication (antecent)";
             btn_MedicamentsDetails_addCI.UseVisualStyleBackColor = true;
-            btn_MedicamentsDetails_addCI.Click += btn_MedicamentsDetails_addCI_Click;
+
             // 
             // btn_MedicamentsDetails_Valid
             // 

@@ -15,17 +15,20 @@ namespace GeStionB.Ordonnances
 {
     public partial class OrdonnancesDetails : Form
     {
+        int id_o;
         public OrdonnancesDetails(int id_o, string posologie, string date, int duree_traitement, string instruction, string nom_m, string nom_p, string libelle_med)
         {
             InitializeComponent();
+            this.id_o = id_o;
             this.boxId.Text = id_o.ToString();
             this.boxPosologie.Text = posologie;
             this.boxDate.Text = date;
             this.boxDuree.Text = duree_traitement.ToString();
             this.boxInstructions.Text = instruction;
+            this.boxMedecin.Text = nom_m;
             FillComboBoxMedicaments(libelle_med);
             FillComboBoxPatients(nom_p);
-            FillComboBoxMedecins(nom_m);
+            
         }
 
         public void FillComboBoxMedicaments(string libelle_med)
@@ -40,12 +43,6 @@ namespace GeStionB.Ordonnances
             PatientDataAccess dataAccessPatient = new PatientDataAccess();
             dataAccessPatient.FillComboBox(comboPatient);
             this.comboPatient.Text = nom_p;
-        }
-        public void FillComboBoxMedecins(string nom_m)
-        {
-            MedecinDataAccess dataAccessMedecin = new MedecinDataAccess();
-            dataAccessMedecin.FillComboBox(comboMedecin);
-            this.comboPatient.Text = nom_m;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -63,11 +60,15 @@ namespace GeStionB.Ordonnances
 
                     string selectedFolder = folderBrowserDialog.SelectedPath;
                     PdfCreator pdfCreator = new PdfCreator();
-                    pdfCreator.CreatePDF(selectedFolder, this.boxId.Text, this.comboMedecin.Text, this.boxDate.Text, this.comboPatient.Text, this.comboMedicament.Text, this.boxPosologie.Text, this.boxDuree.Text, this.boxInstructions.Text);
+                    pdfCreator.CreatePDF(selectedFolder, this.boxId.Text, this.boxMedecin.Text, this.boxDate.Text, this.comboPatient.Text, this.comboMedicament.Text, this.boxPosologie.Text, this.boxDuree.Text, this.boxInstructions.Text);
                 }
             }
         }
 
-
+        private void btn_suppOrdonnance_Click(object sender, EventArgs e)
+        {
+            OrdonnancesDataAccess dataAccess = new OrdonnancesDataAccess();
+            dataAccess.RemoveOrdonnance(id_o);
+        }
     }
 }

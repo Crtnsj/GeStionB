@@ -91,7 +91,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(192, 398);
+            label3.Location = new Point(187, 391);
             label3.Name = "label3";
             label3.Size = new Size(557, 37);
             label3.TabIndex = 7;
@@ -151,7 +151,7 @@
             Controls.Add(box_AddMedecin_prenom);
             Controls.Add(box_AddMedecin_nom);
             Name = "AddMedecin";
-            Text = "AddMedecin";
+            Text = "Créer un médecin";
             ResumeLayout(false);
             PerformLayout();
         }

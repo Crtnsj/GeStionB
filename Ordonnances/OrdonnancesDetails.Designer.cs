@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdonnancesDetails));
             btnCreatePDF = new Button();
             boxPosologie = new TextBox();
             boxDate = new TextBox();
@@ -35,7 +36,6 @@
             boxInstructions = new TextBox();
             comboMedicament = new ComboBox();
             comboPatient = new ComboBox();
-            comboMedecin = new ComboBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -45,6 +45,8 @@
             label7 = new Label();
             boxId = new TextBox();
             label8 = new Label();
+            btn_suppOrdonnance = new Button();
+            boxMedecin = new TextBox();
             SuspendLayout();
             // 
             // btnCreatePDF
@@ -101,15 +103,6 @@
             comboPatient.Name = "comboPatient";
             comboPatient.Size = new Size(272, 45);
             comboPatient.TabIndex = 6;
-            // 
-            // comboMedecin
-            // 
-            comboMedecin.FormattingEnabled = true;
-            comboMedecin.Location = new Point(854, 468);
-            comboMedecin.Name = "comboMedecin";
-            comboMedecin.Size = new Size(272, 45);
-            comboMedecin.TabIndex = 7;
-   
             // 
             // label1
             // 
@@ -192,11 +185,31 @@
             label8.TabIndex = 16;
             label8.Text = "Identifiant";
             // 
+            // btn_suppOrdonnance
+            // 
+            btn_suppOrdonnance.Location = new Point(98, 659);
+            btn_suppOrdonnance.Name = "btn_suppOrdonnance";
+            btn_suppOrdonnance.Size = new Size(316, 52);
+            btn_suppOrdonnance.TabIndex = 17;
+            btn_suppOrdonnance.Text = "Supprimer l'ordonnance";
+            btn_suppOrdonnance.UseVisualStyleBackColor = true;
+            btn_suppOrdonnance.Click += btn_suppOrdonnance_Click;
+            // 
+            // boxMedecin
+            // 
+            boxMedecin.Location = new Point(854, 479);
+            boxMedecin.Name = "boxMedecin";
+            boxMedecin.ReadOnly = true;
+            boxMedecin.Size = new Size(225, 43);
+            boxMedecin.TabIndex = 18;
+            // 
             // OrdonnancesDetails
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1221, 782);
+            Controls.Add(boxMedecin);
+            Controls.Add(btn_suppOrdonnance);
             Controls.Add(label8);
             Controls.Add(boxId);
             Controls.Add(label7);
@@ -206,7 +219,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(comboMedecin);
             Controls.Add(comboPatient);
             Controls.Add(comboMedicament);
             Controls.Add(boxInstructions);
@@ -214,8 +226,9 @@
             Controls.Add(boxDate);
             Controls.Add(boxPosologie);
             Controls.Add(btnCreatePDF);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "OrdonnancesDetails";
-            Text = "OrdonnancesDetails";
+            Text = "Détails de l'ordonnance";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -229,7 +242,6 @@
         private TextBox boxInstructions;
         private ComboBox comboMedicament;
         private ComboBox comboPatient;
-        private ComboBox comboMedecin;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -239,5 +251,7 @@
         private Label label7;
         private TextBox boxId;
         private Label label8;
+        private Button btn_suppOrdonnance;
+        private TextBox boxMedecin;
     }
 }

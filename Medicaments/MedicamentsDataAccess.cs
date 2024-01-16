@@ -21,7 +21,7 @@ namespace GeStionB.Medicaments
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT id_med AS ID, libelle_med AS Libelle, (SELECT libelle_a FROM antecedent WHERE antecedent.id_a = medicament.id_a) AS 'Contre indication' FROM medicament;";
+                string query = "SELECT id_med AS ID, libelle_med AS Libelle FROM medicament;";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
@@ -34,31 +34,31 @@ namespace GeStionB.Medicaments
 
             return dataTable;
         }
-        public void CreateMedicament(string libelle, string CI )
+        public void CreateMedicament(string libelle )
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "INSERT INTO medicament (id_med, libelle_med, id_a) VALUES (NULL, @libelle_med, (SELECT id_a FROM antecedent WHERE libelle_a = @CI)); ";
+                string query = "INSERT INTO medicament (id_med, libelle_med) VALUES (NULL, @libelle_med); ";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@libelle_med", libelle);
-                    command.Parameters.AddWithValue("@CI", CI);
+                    
                     command.ExecuteNonQuery();
                 }
                 conn.Close();
             }
         }
-        public void UpdateMedicamentInfo(int id, string libelle, string CI)
+        public void UpdateMedicamentInfo(int id, string libelle)
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "UPDATE medicament SET libelle_med = @libelle, id_a = (SELECT id_a FROM antecedent WHERE libelle_a = @CI) WHERE id_med = @id;";
+                string query = "UPDATE medicament SET libelle_med = @libelle, WHERE id_med = @id;";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@libelle", libelle);
-                    command.Parameters.AddWithValue("@CI", CI);
+
                     command.Parameters.AddWithValue("@id", id);
                     command.ExecuteNonQuery();
                 }
@@ -71,7 +71,7 @@ namespace GeStionB.Medicaments
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT libelle_med FROM medicament;";
+                string query = "SELECT libelle_med FROM medicament ORDER BY libelle_med ASC;";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     using (MySqlDataReader reader = command.ExecuteReader())

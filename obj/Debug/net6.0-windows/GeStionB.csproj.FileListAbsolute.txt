@@ -174,3 +174,4 @@ C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Ordonnances.OrdonnancesDe
 C:\GeStionB\GeStionB\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
 C:\GeStionB\GeStionB\bin\Debug\net6.0-windows\itextsharp.dll
 C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Ordonnances.addOrdonnance.resources
+C:\GeStionB\GeStionB\obj\Debug\net6.0-windows\GeStionB.Properties.Resources.resources

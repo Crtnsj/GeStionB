@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.codec;
 using Font = iTextSharp.text.Font;
 
 namespace GeStionB.Ordonnances
@@ -29,25 +30,37 @@ namespace GeStionB.Ordonnances
             InfoMedecin.Alignment = Element.ALIGN_LEFT;
             doc.Add(InfoMedecin);
 
+            Paragraph separateur = new Paragraph("======================================================");
+            separateur.Alignment = Element.ALIGN_CENTER;
+            doc.Add(separateur);
+
             Paragraph date = new Paragraph("Fait le"+ date_o , policeParagraphe);
             date.Alignment = Element.ALIGN_RIGHT;
             doc.Add(date);
+            doc.Add(separateur);
 
             Paragraph Patient = new Paragraph("Ordonnance medicale pour : Mr/Mme "+ nom_p);
             Patient.Alignment = Element.ALIGN_LEFT;
             doc.Add(Patient);
+            doc.Add(separateur);
 
             Paragraph Contenu  = new Paragraph("Medicament prescrit: " + libelle_med + "\n" + posologie + " pendant " + duree + " jours");
             Contenu.Alignment = Element.ALIGN_CENTER;
             doc.Add(Contenu);
+            doc.Add(separateur);
 
             Paragraph Instructions = new Paragraph(instructions);
             Instructions.Alignment = Element.ALIGN_CENTER;
             doc.Add(Instructions);
+            doc.Add(separateur);
 
             doc.Close();
-            Process.Start(@"cmd.exe","/c"+OutFile);
-            
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = OutFile,
+                UseShellExecute = true
+            });
+
         }
     }
 }

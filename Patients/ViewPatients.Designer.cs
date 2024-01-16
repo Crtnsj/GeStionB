@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewPatients));
             PatientGridView = new DataGridView();
             Add_patient_button = new Button();
             ((System.ComponentModel.ISupportInitialize)PatientGridView).BeginInit();
@@ -38,14 +39,15 @@
             PatientGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             PatientGridView.Location = new Point(45, 39);
             PatientGridView.Name = "PatientGridView";
+            PatientGridView.ReadOnly = true;
             PatientGridView.RowHeadersWidth = 92;
-            PatientGridView.Size = new Size(1432, 877);
+            PatientGridView.Size = new Size(1292, 877);
             PatientGridView.TabIndex = 0;
             PatientGridView.CellContentClick += PatientGridView_CellContentClick;
             // 
             // Add_patient_button
             // 
-            Add_patient_button.Location = new Point(1237, 966);
+            Add_patient_button.Location = new Point(1097, 950);
             Add_patient_button.Name = "Add_patient_button";
             Add_patient_button.Size = new Size(240, 61);
             Add_patient_button.TabIndex = 1;
@@ -57,9 +59,10 @@
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1522, 1070);
+            ClientSize = new Size(1385, 1042);
             Controls.Add(Add_patient_button);
             Controls.Add(PatientGridView);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ViewPatients";
             Text = "Utilisateurs";
             ((System.ComponentModel.ISupportInitialize)PatientGridView).EndInit();

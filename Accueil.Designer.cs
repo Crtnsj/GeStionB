@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             contextMenuStrip1 = new ContextMenuStrip(components);
             menuStrip1 = new MenuStrip();
             menuStrip2 = new MenuStrip();
@@ -49,7 +50,7 @@
             menuStrip1.ImageScalingSize = new Size(36, 36);
             menuStrip1.Location = new Point(0, 45);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1786, 24);
+            menuStrip1.Size = new Size(938, 24);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -59,7 +60,7 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { gererLesPatiensToolStripMenuItem, gererLesOrdonnacToolStripMenuItem, gererLesMedicamentsToolStripMenuItem });
             menuStrip2.Location = new Point(0, 0);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(1786, 45);
+            menuStrip2.Size = new Size(938, 45);
             menuStrip2.TabIndex = 3;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -88,14 +89,14 @@
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1786, 1126);
+            ClientSize = new Size(938, 443);
             Controls.Add(menuStrip1);
             Controls.Add(menuStrip2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Accueil";
             Text = "Accueil";
             FormClosing += Accueil_FormClosing;
-            Load += Accueil_Load;
             menuStrip2.ResumeLayout(false);
             menuStrip2.PerformLayout();
             ResumeLayout(false);

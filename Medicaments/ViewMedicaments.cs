@@ -40,9 +40,9 @@ namespace GeStionB.Medicaments
                 DataGridViewRow selectedRow = this.MedicamentGridView.Rows[e.RowIndex];
                 int id = Convert.ToInt32(selectedRow.Cells["ID"].Value);
                 string libelle = selectedRow.Cells["Libelle"].Value.ToString();
-                string CI = selectedRow.Cells["Contre Indication"].Value.ToString();
+                
           
-                MedicamentsDetails patientDetail = new MedicamentsDetails(id, libelle, CI);
+                MedicamentsDetails patientDetail = new MedicamentsDetails(id, libelle);
                 patientDetail.Show();
             }
         }

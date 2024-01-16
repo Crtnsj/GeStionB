@@ -18,7 +18,7 @@ namespace GeStionB.Ordonnances
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT ordonnance.id_o AS ID, ordonnance.posologie AS Posologie, ordonnance.date AS \"Date de création\", ordonnance.duree_traitement AS \"Durée du traitement (jours)\", ordonnance.instruction_specifique AS \"Instructions\", (SELECT medecin.nom_m FROM medecin WHERE medecin.id_m = ordonnance.id_m) AS Medecin, (SELECT patient.nom_p FROM patient WHERE patient.id_p = ordonnance.id_p) AS Patient, (SELECT medicament.libelle_med FROM medicament WHERE medicament.id_med = ordonnance.id_med) AS \"Medicament Prescrit\" FROM ordonnance";
+                string query = "SELECT ordonnance.id_o AS ID, ordonnance.posologie AS Posologie, ordonnance.date AS \"Date de création\", ordonnance.duree_traitement AS \"Durée du traitement (jours)\", ordonnance.instruction_specifique AS \"Instructions\", (SELECT medecin.nom_m FROM medecin WHERE medecin.id_m = ordonnance.id_m) AS Medecin, (SELECT CONCAT(nom_p, ' ', prenom_p) FROM patient WHERE patient.id_p = ordonnance.id_p) AS Patient, (SELECT medicament.libelle_med FROM medicament WHERE medicament.id_med = ordonnance.id_med) AS \"Medicament Prescrit\" FROM ordonnance";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
@@ -30,10 +30,10 @@ namespace GeStionB.Ordonnances
             }
             return dataTable;
         }
-        public void CreateOrdonnance(string posologie, int duree, string instructions, string nom_m, string nom_p, string libelle_med)
+        public void CreateOrdonnance(string posologie, int duree, string instructions, string nom_m, string nom_prenom_p, string libelle_med)
         {
-            List<string> listeAllergies = GetAllergieListFromDB(nom_p);
-            List<string> listeAntecedents = GetAntecedentListFromDB(nom_p);
+            List<string> listeAllergies = GetAllergieListFromDB(nom_prenom_p);
+            List<string> listeAntecedents = GetAntecedentListFromDB(nom_prenom_p);
             List<Incompatibilite> listeIncompatibilites = GetIncompatibiliteFromDB(libelle_med);
 
             bool isIncompatible = false;
@@ -66,7 +66,7 @@ namespace GeStionB.Ordonnances
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO ordonnance (id_o, posologie, date, duree_traitement, instruction_specifique, id_m, id_p, id_med) VALUES (NULL, @posologie, @date, @duree, @instructions,(SELECT id_m FROM medecin WHERE medecin.nom_m = @nom_m), (SELECT id_p FROM patient WHERE patient.nom_p = @nom_p), (SELECT id_med FROM medicament WHERE medicament.libelle_med = @libelle_med)); ";
+                    string query = "INSERT INTO ordonnance (id_o, posologie, date, duree_traitement, instruction_specifique, id_m, id_p, id_med) VALUES (NULL, @posologie, @date, @duree, @instructions,(SELECT id_m FROM medecin WHERE medecin.nom_m = @nom_m), (SELECT id_p FROM patient WHERE CONCAT(patient.nom_p, ' ', patient.prenom_p) = @nom_prenom_p), (SELECT id_med FROM medicament WHERE medicament.libelle_med = @libelle_med)); ";
                     using (MySqlCommand command = new MySqlCommand(query, conn))
                     {
 
@@ -75,7 +75,7 @@ namespace GeStionB.Ordonnances
                         command.Parameters.AddWithValue("@duree", duree);
                         command.Parameters.AddWithValue("@instructions", instructions);
                         command.Parameters.AddWithValue("@nom_m", nom_m);
-                        command.Parameters.AddWithValue("@nom_p", nom_p);
+                        command.Parameters.AddWithValue("@nom_prenom_p", nom_prenom_p);
                         command.Parameters.AddWithValue("@libelle_med", libelle_med);
                         command.ExecuteNonQuery();
                     }
@@ -87,17 +87,17 @@ namespace GeStionB.Ordonnances
             
 
         }
-        public List<string> GetAntecedentListFromDB(string nom_p)
+        public List<string> GetAntecedentListFromDB(string nom_prenom_p)
         {
             List<string> list = new List<string>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT id_a FROM a_eu WHERE id_p = (SELECT id_p FROM patient WHERE patient.nom_p = @nom_p);";
+                string query = "SELECT id_a FROM a_eu WHERE id_p = (SELECT id_p FROM patient WHERE CONCAT(patient.nom_p, ' ', patient.prenom_p) = @nom_prenom_p);";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
-                    command.Parameters.AddWithValue("@nom_p", nom_p);
+                    command.Parameters.AddWithValue("@nom_prenom_p", nom_prenom_p);
 
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
@@ -113,17 +113,17 @@ namespace GeStionB.Ordonnances
             return list;
         }
 
-        public List<string> GetAllergieListFromDB(string nom_p)
+        public List<string> GetAllergieListFromDB(string nom_prenom_p)
         {
             List<string> list = new List<string>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT id_al FROM est WHERE id_p = (SELECT id_p FROM patient WHERE patient.nom_p = @nom_p);";
+                string query = "SELECT id_al FROM est WHERE id_p = (SELECT id_p FROM patient WHERE CONCAT(patient.nom_p, ' ', patient.prenom_p) = @nom_prenom_p);";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
-                    command.Parameters.AddWithValue("@nom_p", nom_p);
+                    command.Parameters.AddWithValue("@nom_prenom_p", nom_prenom_p);
 
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
@@ -177,6 +177,21 @@ namespace GeStionB.Ordonnances
             }
 
             return list;
+        }
+        public void RemoveOrdonnance(int id_o)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM ordonnance WHERE `ordonnance`.`id_o` = @id_o";
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@id_o", id_o);
+                    command.ExecuteNonQuery();
+                    
+                }
+                conn.Close();
+            }
         }
     } 
 }

@@ -17,37 +17,21 @@ namespace GeStionB.Medicaments
         private MedicamentsDataAccess dataAccessMedicament = new MedicamentsDataAccess();
         private int Id { get; }
 
-        public MedicamentsDetails(int id, string libelle, string CI)
+        public MedicamentsDetails(int id, string libelle)
         {
             InitializeComponent();
-            FillComboBox();
+
             this.Id = id;
             this.Box_change_libelle.Text = libelle;
-            this.Combo_change_CI.Text = CI;
-            FillComboBox();
-            this.Activated += AddMedicament_Activated;
-        }
 
-        private void AddMedicament_Activated(object sender, EventArgs e)
-        {
-            FillComboBox();
-        }
-
-        private void FillComboBox()
-        {
-            dataAccessAntecedent.FillComboBox(Combo_change_CI);
 
         }
 
-        private void btn_MedicamentsDetails_addCI_Click(object sender, EventArgs e)
-        {
-            AddAntecedent addAntecedent = new AddAntecedent();
-            addAntecedent.Show();
-        }
+
 
         private void btn_MedicamentsDetails_Valid_Click(object sender, EventArgs e)
         {
-            dataAccessMedicament.UpdateMedicamentInfo(Id, this.Box_change_libelle.Text, this.Combo_change_CI.Text);
+            dataAccessMedicament.UpdateMedicamentInfo(Id, this.Box_change_libelle.Text);
             this.Close();
         }
 

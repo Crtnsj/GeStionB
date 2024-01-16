@@ -43,11 +43,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(263, 181);
+            label1.Location = new Point(96, 191);
             label1.Name = "label1";
-            label1.Size = new Size(355, 37);
+            label1.Size = new Size(706, 37);
             label1.TabIndex = 1;
-            label1.Text = "Mot de passe administrateur";
+            label1.Text = "Mot de passe administrateur, valider avec la touche entrée";
             // 
             // AdminValidation
             // 
@@ -57,7 +57,7 @@
             Controls.Add(label1);
             Controls.Add(Box_mdpAdmin);
             Name = "AdminValidation";
-            Text = "AdminValidation";
+            Text = "Validation administrateur";
             ResumeLayout(false);
             PerformLayout();
         }

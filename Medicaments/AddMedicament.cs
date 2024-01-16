@@ -18,29 +18,14 @@ namespace GeStionB.Medicaments
         public AddMedicament()
         {
             InitializeComponent();
-            FillComboBox();
-            this.Activated += AddMedicament_Activated;
         }
 
-        private void AddMedicament_Activated(object sender, EventArgs e)
-        {
-            FillComboBox();
-        }
-    
-        public void FillComboBox()
-        {
-            dataAccess.FillComboBox(combo_Antecedent);
-        }
 
-        private void combo_Antecedent_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void Btn_AddMedicament_Ajouter_Click(object sender, EventArgs e)
         {
             MedicamentsDataAccess dataAccess = new MedicamentsDataAccess();
-            dataAccess.CreateMedicament(this.Box_AddMedicament_libelle.Text, this.combo_Antecedent.Text);
+            dataAccess.CreateMedicament(this.Box_AddMedicament_libelle.Text);
             this.Close();
         }
 
