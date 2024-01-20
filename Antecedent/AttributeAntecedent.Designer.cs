@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AttributeAntecedent));
             combo_antecedents = new ComboBox();
             label_attributeAntecedent = new Label();
             btn_valid_attributAnT = new Button();
@@ -37,7 +38,7 @@
             // combo_antecedents
             // 
             combo_antecedents.FormattingEnabled = true;
-            combo_antecedents.Location = new Point(295, 237);
+            combo_antecedents.Location = new Point(159, 133);
             combo_antecedents.Name = "combo_antecedents";
             combo_antecedents.Size = new Size(272, 45);
             combo_antecedents.TabIndex = 0;
@@ -45,7 +46,7 @@
             // label_attributeAntecedent
             // 
             label_attributeAntecedent.AutoSize = true;
-            label_attributeAntecedent.Location = new Point(204, 164);
+            label_attributeAntecedent.Location = new Point(67, 56);
             label_attributeAntecedent.Name = "label_attributeAntecedent";
             label_attributeAntecedent.Size = new Size(491, 37);
             label_attributeAntecedent.TabIndex = 1;
@@ -53,7 +54,7 @@
             // 
             // btn_valid_attributAnT
             // 
-            btn_valid_attributAnT.Location = new Point(329, 367);
+            btn_valid_attributAnT.Location = new Point(206, 220);
             btn_valid_attributAnT.Name = "btn_valid_attributAnT";
             btn_valid_attributAnT.Size = new Size(169, 52);
             btn_valid_attributAnT.TabIndex = 2;
@@ -63,7 +64,7 @@
             // 
             // Btn_AddAntecedent
             // 
-            Btn_AddAntecedent.Location = new Point(719, 237);
+            Btn_AddAntecedent.Location = new Point(579, 128);
             Btn_AddAntecedent.Name = "Btn_AddAntecedent";
             Btn_AddAntecedent.Size = new Size(370, 52);
             Btn_AddAntecedent.TabIndex = 3;
@@ -75,13 +76,14 @@
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1260, 503);
+            ClientSize = new Size(993, 346);
             Controls.Add(Btn_AddAntecedent);
             Controls.Add(btn_valid_attributAnT);
             Controls.Add(label_attributeAntecedent);
             Controls.Add(combo_antecedents);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AttributeAntecedent";
-            Text = "AttributeAntecedent";
+            Text = "Attribuer des antecedents";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -67,11 +67,11 @@ namespace GeStionB.Medicaments
         }
         public void FillComboBox(ComboBox comboBox)
         {
-
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
                 string query = "SELECT libelle_med FROM medicament ORDER BY libelle_med ASC;";
+                // Requete qui ressort tous les libelle de la table medicament et les tries par ordre alphatique
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     using (MySqlDataReader reader = command.ExecuteReader())
@@ -81,13 +81,12 @@ namespace GeStionB.Medicaments
                         {
                             string value = reader.GetString(0);
                             comboBox.Items.Add(value);
+                            //complete la comboxBox avec chaque ligne du resultat le requete
                         }
                     }
                 }
                 conn.Close();
             }
-
-
         }
     }
 }

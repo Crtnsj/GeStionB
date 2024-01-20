@@ -16,29 +16,33 @@ namespace GeStionB.Medicaments
     public partial class ManageIncompatiblite : Form
     {
         int Id { get; set; }
-       
         IncompatibiliteDataAccess dataAccessIncompatibilite = new IncompatibiliteDataAccess();
         public ManageIncompatiblite(int id)
         {
             InitializeComponent();
             this.Id = id;
+            // Affecte la valeur de l'ID passé en paramètre à la propriété Id de l'objet ManageIncompatiblite
             this.Activated += ManageMedicament_Activated;
+            // Lorsque la fentre est active -> executer ManageMedicament_Activated
         }
 
         private void ManageMedicament_Activated(object sender, EventArgs e)
-        {   
+            //appele les methodes pour remplir les combobox
+        {
             FillComboBoxAntecedents();
-            FillComboBoxAllergies();
+            FillComboBoxAllergies();      
             FillComboBoxMedicaments();
         }
-
-
-
         public void FillComboBoxMedicaments()
         {
             MedicamentsDataAccess dataAccess = new MedicamentsDataAccess();
-            dataAccess.FillComboBox(combo_Medicaments); 
+            // Instance de la classe MedicamentsDataAccess utilisée pour accéder aux données de médicaments
+            dataAccess.FillComboBox(combo_Medicaments);
+            // Remplit la liste déroulante combo_Medicaments avec les données de médicaments via la méthode
+            // FillComboBox de l'objet dataAccess
             this.combo_Medicaments.Text = dataAccessIncompatibilite.FillDefaultValueComboxBoxMedicaments(Id);
+            // Affecte la valeur par défaut de la liste déroulante combo_Medicaments en fonction
+            // de l'ID de gestion de l'incompatibilité
         }
         public void FillComboBoxAllergies()
         {

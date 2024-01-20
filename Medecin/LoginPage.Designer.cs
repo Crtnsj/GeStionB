@@ -63,6 +63,7 @@
             Box_Login_Password.Size = new Size(225, 43);
             Box_Login_Password.TabIndex = 2;
             Box_Login_Password.UseSystemPasswordChar = true;
+            Box_Login_Password.KeyPress += Box_Login_Password_KeyPress;
             // 
             // label1
             // 

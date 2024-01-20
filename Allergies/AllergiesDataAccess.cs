@@ -54,23 +54,30 @@ namespace GeStionB.Allergies
         }
         public DataTable GetAllergieListFromDB(int id_p)
         {
+            //initialise un nouvel objet de type DataTable
             DataTable dataTable = new DataTable();
 
+            //Creer la connexion à la BDD grace à la chaine de connexion
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
+                //ouvre la connexion
                 conn.Open();
+                //definit la requete qui sera utilisee
                 string query = "SELECT * FROM allergie WHERE id_al IN (SELECT id_al FROM est WHERE id_p = @id_patient);";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
+                    //creer un parametre de requete, @id_aptient sera remplace au fonctionnement par l'ID du patient
                     command.Parameters.AddWithValue("@id_patient", id_p);
+                    //complete la dataTable avec le resultat de la requete
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
                     {
                         adapter.Fill(dataTable);
                     }
                 }
+                //ferme la connexion
                 conn.Close();
             }
-
+            // renvoie la dataTable
             return dataTable;
         }
         public void AttributeAllergie(int id_p, string libelle)

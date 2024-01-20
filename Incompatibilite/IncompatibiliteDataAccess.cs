@@ -44,27 +44,32 @@ namespace GeStionB.Incompatibilite
         public string FillDefaultValueComboxBoxMedicaments(int id_med)
         {
             string medicament = "";
+            // Variable utilisée pour stocker le nom du médicament par défaut
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-
-                string query = "SELECT libelle_med FROM medicament WHERE medicament.id_med = (SELECT id_med_Medicament FROM incompatible WHERE incompatible.id_med = @id_med); ";
-
+                // Ouverture de la connexion à la base de données
+                string query = "SELECT libelle_med FROM medicament WHERE medicament.id_med = " +
+                    "(SELECT id_med_Medicament FROM incompatible WHERE incompatible.id_med = @id_med);";
+                // Requête SQL pour sélectionner le nom du médicament en fonction de l'ID fourni
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@id_med", id_med);
+                    // Ajout du paramètre @id_med à la requête SQL pour éviter les injections SQL
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())
                         {
                             medicament = reader.GetString(0);
+                            // Lecture du résultat de la requête et affectation du nom du médicament à la variable medicament
                         }
                     }
                 }
-
                 conn.Close();
+                // Fermeture de la connexion à la base de données
             }
             return medicament;
+            // Retourne le nom du médicament par défaut
         }
         public string FillDefaultValueComboxBoxAllergies(int id_med)
         {

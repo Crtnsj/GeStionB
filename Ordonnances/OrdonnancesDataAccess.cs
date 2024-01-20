@@ -33,11 +33,13 @@ namespace GeStionB.Ordonnances
         public void CreateOrdonnance(string posologie, int duree, string instructions, string nom_m, string nom_prenom_p, string libelle_med)
         {
             List<string> listeAllergies = GetAllergieListFromDB(nom_prenom_p);
+            // Récupération de la liste des allergies du patient à partir de la base de données
             List<string> listeAntecedents = GetAntecedentListFromDB(nom_prenom_p);
+            // Récupération de la liste des antécédents du patient à partir de la base de données
             List<Incompatibilite> listeIncompatibilites = GetIncompatibiliteFromDB(libelle_med);
-
+            // Récupération de la liste des incompatibilités du médicament à partir de la base de données
             bool isIncompatible = false;
-
+            // Variable utilisée pour indiquer si le médicament est incompatible
             foreach (string allergie in listeAllergies)
             {
                 if (listeIncompatibilites.Any(incompatibilite => incompatibilite.Id_al == allergie || incompatibilite.Id_a == allergie))
@@ -47,21 +49,21 @@ namespace GeStionB.Ordonnances
                     return;
                 }
             }
+            // Pour chaque allergie dans la liste des allergies du patient,
+            // vérifier si elle est présente dans la liste des incompatibilités du médicament.
+            //Si l'incompatibilité est trouvée -> sortir de la méthode
 
             foreach (string antecedent in listeAntecedents)
             {
                 if (listeIncompatibilites.Any(incompatibilite => incompatibilite.Id_al == antecedent || incompatibilite.Id_a == antecedent))
                 {
                     isIncompatible = true;
-
                     MessageBox.Show("Le médicament est incompatible avec un antécédent du patient ");
                     return;
-
                 }
-            }
-
+            }//de même pour els antecedents
             if (!isIncompatible)
-            {
+            { //si la compatibilité est validée -> création de l'ordonnance
                 string date = DateTime.Now.ToString("yyyy-MM-dd");
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {

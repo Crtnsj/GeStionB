@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllergies));
             Grid_Allergies = new DataGridView();
             btn_AtributeAllergie = new Button();
             ((System.ComponentModel.ISupportInitialize)Grid_Allergies).BeginInit();
@@ -60,8 +61,9 @@
             ClientSize = new Size(1130, 877);
             Controls.Add(btn_AtributeAllergie);
             Controls.Add(Grid_Allergies);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ViewAllergies";
-            Text = "ViewAllergies";
+            Text = "Allergies";
             Load += ViewAllergies_Load;
             ((System.ComponentModel.ISupportInitialize)Grid_Allergies).EndInit();
             ResumeLayout(false);

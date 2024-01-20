@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewMedicaments));
             MedicamentGridView = new DataGridView();
             Button_addMedicament = new Button();
             ((System.ComponentModel.ISupportInitialize)MedicamentGridView).BeginInit();
@@ -61,8 +62,9 @@
             ClientSize = new Size(1235, 1037);
             Controls.Add(Button_addMedicament);
             Controls.Add(MedicamentGridView);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ViewMedicaments";
-            Text = "ViewMedicaments";
+            Text = "Liste des medicaments";
             ((System.ComponentModel.ISupportInitialize)MedicamentGridView).EndInit();
             ResumeLayout(false);
         }
