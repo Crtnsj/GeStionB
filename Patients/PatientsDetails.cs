@@ -63,11 +63,7 @@ namespace GeStionB.Patients
 
         //Evenement qui corresponds au bouton pour gérer les allergies
         private void btn_PatientsDetails_Allergies_Click(object sender, EventArgs e)
-<<<<<<< HEAD
         {
-=======
-        {  
->>>>>>> 4117660647fae0b6c0d81ab8798c00174a6cfded
             // Créer une nouvelle fenetre de viewAllergies en passe en parametre l'ID du patient
             ViewAllergies viewAntecedents = new ViewAllergies(Id);
             //Afficher la fenetre
