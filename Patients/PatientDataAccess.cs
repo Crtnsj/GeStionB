@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 
 namespace GeStionB.Patients
@@ -85,6 +85,20 @@ namespace GeStionB.Patients
                             comboBox.Items.Add(value);
                         }
                     }
+                }
+                conn.Close();
+            }
+        }
+        public void deletePatient(int patientId)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "DELETE FROM patient WHERE `patient`.`id_p` = @id_p";
+                using (MySqlCommand command = new MySqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@id_p", patientId);
+                    command.ExecuteNonQuery();
                 }
                 conn.Close();
             }

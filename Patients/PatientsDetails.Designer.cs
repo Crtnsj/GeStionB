@@ -40,6 +40,7 @@
             btn_PatientsDetails_Antec = new Button();
             date_PatientDetails = new DateTimePicker();
             label3 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // nom_p_label
@@ -141,11 +142,22 @@
             label3.TabIndex = 17;
             label3.Text = "Date de naissance format : (Année-Mois-Jour)";
             // 
+            // button1
+            // 
+            button1.Location = new Point(749, 344);
+            button1.Name = "button1";
+            button1.Size = new Size(280, 52);
+            button1.TabIndex = 18;
+            button1.Text = "Supprimer le patient";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // PatientsDetails
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1478, 416);
+            Controls.Add(button1);
             Controls.Add(date_PatientDetails);
             Controls.Add(label3);
             Controls.Add(btn_PatientsDetails_Antec);
@@ -178,5 +190,6 @@
         private Button btn_PatientsDetails_Antec;
         private DateTimePicker date_PatientDetails;
         private Label label3;
+        private Button button1;
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GeStionB\\GeStionB\\GeStionB.csproj": {}
+    "C:\\backup\\GeStionB\\GeStionB.csproj": {}
   },
   "projects": {
-    "C:\\GeStionB\\GeStionB\\GeStionB.csproj": {
+    "C:\\backup\\GeStionB\\GeStionB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GeStionB\\GeStionB\\GeStionB.csproj",
+        "projectUniqueName": "C:\\backup\\GeStionB\\GeStionB.csproj",
         "projectName": "GeStionB",
-        "projectPath": "C:\\GeStionB\\GeStionB\\GeStionB.csproj",
+        "projectPath": "C:\\backup\\GeStionB\\GeStionB.csproj",
         "packagesPath": "C:\\Users\\CRTNSJ\\.nuget\\packages\\",
-        "outputPath": "C:\\GeStionB\\GeStionB\\obj\\",
+        "outputPath": "C:\\backup\\GeStionB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\CRTNSJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -50,7 +50,7 @@
             },
             "MySqlConnector": {
               "target": "Package",
-              "version": "[2.3.1, )"
+              "version": "[2.3.7, )"
             },
             "iTextSharp": {
               "target": "Package",

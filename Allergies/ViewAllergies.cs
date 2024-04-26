@@ -14,26 +14,36 @@ namespace GeStionB.Allergies
     public partial class ViewAllergies : Form
     {
         private int Id_p { get; set; }
+        //initialise la variable qui contient l'ID du patient
         public ViewAllergies(int id_p)
 
 
         {
+            //recupère l'ID passé en parametre et definit la variable Id_p afin
+            //de le rentre accessible à toute la classe
             Id_p = id_p;
+            //initialise la fentre
             InitializeComponent();
+            //appelle la méthode UpdateDataGridView et lui passe en parametre l'id du patient
             UpdateDataGridView(id_p);
+            //Evenement qui permet d'actualiser la GridView lorsque la fenetre est active
             this.Activated += ViewAllergies_Activated;
-
         }
 
         private void ViewAllergies_Activated(object sender, EventArgs e)
         {
+            //appelle la méthode UpdateDataGridView et lui passe en parametre l'id du patient
             UpdateDataGridView(Id_p);
         }
 
         private void UpdateDataGridView(int id_p)
         {
+            //Creer un nouvel objet, dataAccess afin de rendre accessible les methodes de AllergiesDataAccess
             AllergiesDataAccess dataAccess = new AllergiesDataAccess();
+            //initialise la grid view à null
             this.Grid_Allergies.DataSource = null;
+            //Complete la dataGridView avec les allergies du patient renvoyé par
+            //la méthode GetAllergieListFromDB de dataAccess
             this.Grid_Allergies.DataSource = dataAccess.GetAllergieListFromDB(id_p);
         }
 

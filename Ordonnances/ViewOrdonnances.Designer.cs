@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewOrdonnances));
             gridOrdonnance = new DataGridView();
             btn_AddOrdonnance = new Button();
             ((System.ComponentModel.ISupportInitialize)gridOrdonnance).BeginInit();
@@ -40,13 +41,13 @@
             gridOrdonnance.Name = "gridOrdonnance";
             gridOrdonnance.RowHeadersWidth = 92;
             gridOrdonnance.RowTemplate.Height = 45;
-            gridOrdonnance.Size = new Size(1304, 838);
+            gridOrdonnance.Size = new Size(1884, 838);
             gridOrdonnance.TabIndex = 0;
             gridOrdonnance.CellContentClick += gridOrdonnance_CellContentClick;
             // 
             // btn_AddOrdonnance
             // 
-            btn_AddOrdonnance.Location = new Point(1055, 940);
+            btn_AddOrdonnance.Location = new Point(1635, 930);
             btn_AddOrdonnance.Name = "btn_AddOrdonnance";
             btn_AddOrdonnance.Size = new Size(309, 52);
             btn_AddOrdonnance.TabIndex = 1;
@@ -58,11 +59,12 @@
             // 
             AutoScaleDimensions = new SizeF(15F, 37F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1440, 1042);
+            ClientSize = new Size(2026, 1042);
             Controls.Add(btn_AddOrdonnance);
             Controls.Add(gridOrdonnance);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ViewOrdonnances";
-            Text = "ViewOrdonnances";
+            Text = "Liste des ordonnances";
             ((System.ComponentModel.ISupportInitialize)gridOrdonnance).EndInit();
             ResumeLayout(false);
         }

@@ -52,18 +52,21 @@ namespace GeStionB.Ordonnances
 
         private void btnCreatePDF_Click(object sender, EventArgs e)
         {
-
             using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
             {
+                //ouvre l'expolorateur de fichier afin de choisir le dossier de destination
                 if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                 {
-
                     string selectedFolder = folderBrowserDialog.SelectedPath;
+                    //initialise la variable selectedFolder avec la valeur du dossier selectionné
                     PdfCreator pdfCreator = new PdfCreator();
+                    //créer une nouvelle instance de PdfCreator
                     pdfCreator.CreatePDF(selectedFolder, this.boxId.Text, this.boxMedecin.Text, this.boxDate.Text, this.comboPatient.Text, this.comboMedicament.Text, this.boxPosologie.Text, this.boxDuree.Text, this.boxInstructions.Text);
+                    //Utilise la méthode CreatePDF de pdfCreator et le passe les dossier de destinations et les informations
+                    //necessaire à l'ordonnance
                 }
             }
-        }
+        }//evenement qui correspond au click du bouton de création du PDF
 
         private void btn_suppOrdonnance_Click(object sender, EventArgs e)
         {

@@ -33,7 +33,7 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             menuStrip1 = new MenuStrip();
             menuStrip2 = new MenuStrip();
-            gererLesPatiensToolStripMenuItem = new ToolStripMenuItem();
+            gererLesPatientsToolStripMenuItem = new ToolStripMenuItem();
             gererLesOrdonnacToolStripMenuItem = new ToolStripMenuItem();
             gererLesMedicamentsToolStripMenuItem = new ToolStripMenuItem();
             menuStrip2.SuspendLayout();
@@ -48,7 +48,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(36, 36);
-            menuStrip1.Location = new Point(0, 45);
+            menuStrip1.Location = new Point(0, 47);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(938, 24);
             menuStrip1.TabIndex = 2;
@@ -57,31 +57,31 @@
             // menuStrip2
             // 
             menuStrip2.ImageScalingSize = new Size(36, 36);
-            menuStrip2.Items.AddRange(new ToolStripItem[] { gererLesPatiensToolStripMenuItem, gererLesOrdonnacToolStripMenuItem, gererLesMedicamentsToolStripMenuItem });
+            menuStrip2.Items.AddRange(new ToolStripItem[] { gererLesPatientsToolStripMenuItem, gererLesOrdonnacToolStripMenuItem, gererLesMedicamentsToolStripMenuItem });
             menuStrip2.Location = new Point(0, 0);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(938, 45);
+            menuStrip2.Size = new Size(938, 47);
             menuStrip2.TabIndex = 3;
             menuStrip2.Text = "menuStrip2";
             // 
-            // gererLesPatiensToolStripMenuItem
+            // gererLesPatientsToolStripMenuItem
             // 
-            gererLesPatiensToolStripMenuItem.Name = "gererLesPatiensToolStripMenuItem";
-            gererLesPatiensToolStripMenuItem.Size = new Size(236, 41);
-            gererLesPatiensToolStripMenuItem.Text = "Gerer les patiens";
-            gererLesPatiensToolStripMenuItem.Click += gererLesPatiensToolStripMenuItem_Click;
+            gererLesPatientsToolStripMenuItem.Name = "gererLesPatientsToolStripMenuItem";
+            gererLesPatientsToolStripMenuItem.Size = new Size(245, 43);
+            gererLesPatientsToolStripMenuItem.Text = "Gerer les patients";
+            gererLesPatientsToolStripMenuItem.Click += gererLesPatiensToolStripMenuItem_Click;
             // 
             // gererLesOrdonnacToolStripMenuItem
             // 
             gererLesOrdonnacToolStripMenuItem.Name = "gererLesOrdonnacToolStripMenuItem";
-            gererLesOrdonnacToolStripMenuItem.Size = new Size(303, 41);
+            gererLesOrdonnacToolStripMenuItem.Size = new Size(303, 43);
             gererLesOrdonnacToolStripMenuItem.Text = "Gerer les ordonnances";
             gererLesOrdonnacToolStripMenuItem.Click += gererLesOrdonnacToolStripMenuItem_Click;
             // 
             // gererLesMedicamentsToolStripMenuItem
             // 
             gererLesMedicamentsToolStripMenuItem.Name = "gererLesMedicamentsToolStripMenuItem";
-            gererLesMedicamentsToolStripMenuItem.Size = new Size(308, 41);
+            gererLesMedicamentsToolStripMenuItem.Size = new Size(308, 43);
             gererLesMedicamentsToolStripMenuItem.Text = "Gerer les medicaments";
             gererLesMedicamentsToolStripMenuItem.Click += gererLesMedicamentsToolStripMenuItem_Click;
             // 
@@ -107,7 +107,7 @@
         private ContextMenuStrip contextMenuStrip1;
         private MenuStrip menuStrip1;
         private MenuStrip menuStrip2;
-        private ToolStripMenuItem gererLesPatiensToolStripMenuItem;
+        private ToolStripMenuItem gererLesPatientsToolStripMenuItem;
         private ToolStripMenuItem gererLesOrdonnacToolStripMenuItem;
         private ToolStripMenuItem gererLesMedicamentsToolStripMenuItem;
     }

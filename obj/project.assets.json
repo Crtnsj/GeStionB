@@ -212,7 +212,7 @@
           }
         }
       },
-      "MySqlConnector/2.3.1": {
+      "MySqlConnector/2.3.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "7.0.1",
@@ -941,10 +941,10 @@
         "runtimes/win-x64/native/krbcc64.dll"
       ]
     },
-    "MySqlConnector/2.3.1": {
-      "sha512": "FYTnvNBbNSZotSWUerK22Ztsc3vx3wBRZ4veavkUbfCBNthtCr3CH5Wpoo4l5gBD2TmQD9JbL33Gf9kWko1yYw==",
+    "MySqlConnector/2.3.7": {
+      "sha512": "YiVOxvJ+vAYW8NT9gHv8RxKCDFCSXAObF3z0Ou/8WRv8Lsn2QsxaPW5xEwPE+xCcAq6BGkrI8GTOC09Xg09blQ==",
       "type": "package",
-      "path": "mysqlconnector/2.3.1",
+      "path": "mysqlconnector/2.3.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -966,7 +966,7 @@
         "lib/netstandard2.1/MySqlConnector.dll",
         "lib/netstandard2.1/MySqlConnector.xml",
         "logo.png",
-        "mysqlconnector.2.3.1.nupkg.sha512",
+        "mysqlconnector.2.3.7.nupkg.sha512",
         "mysqlconnector.nuspec"
       ]
     },
@@ -2016,7 +2016,7 @@
     "net6.0-windows7.0": [
       "BCrypt.Net-Next >= 4.0.3",
       "MySql.Data >= 8.2.0",
-      "MySqlConnector >= 2.3.1",
+      "MySqlConnector >= 2.3.7",
       "iTextSharp >= 5.5.13.3"
     ]
   },
@@ -2026,11 +2026,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GeStionB\\GeStionB\\GeStionB.csproj",
+      "projectUniqueName": "C:\\backup\\GeStionB\\GeStionB.csproj",
       "projectName": "GeStionB",
-      "projectPath": "C:\\GeStionB\\GeStionB\\GeStionB.csproj",
+      "projectPath": "C:\\backup\\GeStionB\\GeStionB.csproj",
       "packagesPath": "C:\\Users\\CRTNSJ\\.nuget\\packages\\",
-      "outputPath": "C:\\GeStionB\\GeStionB\\obj\\",
+      "outputPath": "C:\\backup\\GeStionB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CRTNSJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2069,7 +2069,7 @@
           },
           "MySqlConnector": {
             "target": "Package",
-            "version": "[2.3.1, )"
+            "version": "[2.3.7, )"
           },
           "iTextSharp": {
             "target": "Package",

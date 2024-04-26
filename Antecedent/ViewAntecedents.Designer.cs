@@ -29,6 +29,7 @@ namespace GeStionB.Antecedent
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAntecedents));
             Grid_Antecedent = new DataGridView();
             button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)Grid_Antecedent).BeginInit();
@@ -61,8 +62,9 @@ namespace GeStionB.Antecedent
             ClientSize = new Size(1017, 884);
             Controls.Add(button1);
             Controls.Add(Grid_Antecedent);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ViewAntecedents";
-            Text = "ViewAntecedents";
+            Text = "Antecedents";
             Load += ViewAntecedents_Load;
             ((System.ComponentModel.ISupportInitialize)Grid_Antecedent).EndInit();
             ResumeLayout(false);

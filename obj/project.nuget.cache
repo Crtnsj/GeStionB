@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1mPxySPaZHLo1cCOWZJ/T8/m960e16ZEuMeFCW9O/SlUzqD2pW7O+RI7Ofhvhr+nfQQxdLCbsWdxQXwtdgs74A==",
+  "dgSpecHash": "Oj+M1ofAGIjNM+KucUpdNNbQ3GceO0O1wWCXC4aTjfIrv82jw48SYrsG8/zN0n8kkZtMSyEmAJmPJetitQB3bQ==",
   "success": true,
-  "projectFilePath": "C:\\GeStionB\\GeStionB\\GeStionB.csproj",
+  "projectFilePath": "C:\\backup\\GeStionB\\GeStionB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CRTNSJ\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\CRTNSJ\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
@@ -17,7 +17,7 @@
     "C:\\Users\\CRTNSJ\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\CRTNSJ\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\CRTNSJ\\.nuget\\packages\\mysql.data\\8.2.0\\mysql.data.8.2.0.nupkg.sha512",
-    "C:\\Users\\CRTNSJ\\.nuget\\packages\\mysqlconnector\\2.3.1\\mysqlconnector.2.3.1.nupkg.sha512",
+    "C:\\Users\\CRTNSJ\\.nuget\\packages\\mysqlconnector\\2.3.7\\mysqlconnector.2.3.7.nupkg.sha512",
     "C:\\Users\\CRTNSJ\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\CRTNSJ\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
     "C:\\Users\\CRTNSJ\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.2\\system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512",
