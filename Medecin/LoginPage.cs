@@ -27,8 +27,8 @@ namespace GeStionB.Medecin
             string nom_m = dataAccess.GetNameOfMedecin(this.Box_Login_Username.Text);
             //recupere le nom 
             if (hash != null)
-                //si un hash est trouver dans la BDD -> comparer les mots de passe
-            { 
+            //si un hash est trouver dans la BDD -> comparer les mots de passe
+            {
                 Bcrypt bcrypt = new Bcrypt();
                 bool result = bcrypt.Descryption(this.Box_Login_Password.Text, hash);
                 //utilise la methode descryption de la classe Bcrypt
@@ -89,6 +89,16 @@ namespace GeStionB.Medecin
                     MessageBox.Show("Mauvais identifiant/mot de passe");
                 }
             }
-            }
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
