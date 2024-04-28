@@ -13,7 +13,7 @@ namespace GeStionB.Antecedent
 {
     public partial class AddAntecedent : Form
     {
-        
+
         public AddAntecedent()
         {
             InitializeComponent();

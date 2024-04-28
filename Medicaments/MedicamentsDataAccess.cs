@@ -54,7 +54,7 @@ namespace GeStionB.Medicaments
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "UPDATE medicament SET libelle_med = @libelle, WHERE id_med = @id;";
+                string query = "UPDATE medicament SET libelle_med = @libelle WHERE id_med = @id;";
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@libelle", libelle);

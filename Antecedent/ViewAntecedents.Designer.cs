@@ -37,34 +37,40 @@ namespace GeStionB.Antecedent
             // 
             // Grid_Antecedent
             // 
+            Grid_Antecedent.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Grid_Antecedent.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            Grid_Antecedent.Location = new Point(45, 34);
+            Grid_Antecedent.Location = new Point(11, 11);
+            Grid_Antecedent.Margin = new Padding(2, 2, 2, 2);
             Grid_Antecedent.Name = "Grid_Antecedent";
             Grid_Antecedent.RowHeadersWidth = 92;
             Grid_Antecedent.RowTemplate.Height = 45;
-            Grid_Antecedent.Size = new Size(911, 719);
+            Grid_Antecedent.Size = new Size(607, 486);
             Grid_Antecedent.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(513, 799);
+            button1.BackColor = SystemColors.ControlLight;
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(321, 530);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(406, 52);
+            button1.Size = new Size(297, 46);
             button1.TabIndex = 1;
-            button1.Text = "Attribuer un nouvel antecedent";
-            button1.UseVisualStyleBackColor = true;
+            button1.Text = "Attribuer un nouvel antécédent";
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // ViewAntecedents
             // 
-            AutoScaleDimensions = new SizeF(15F, 37F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1017, 884);
+            ClientSize = new Size(637, 597);
             Controls.Add(button1);
             Controls.Add(Grid_Antecedent);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2, 2, 2, 2);
             Name = "ViewAntecedents";
-            Text = "Antecedents";
+            Text = "Antécédents du patient";
             Load += ViewAntecedents_Load;
             ((System.ComponentModel.ISupportInitialize)Grid_Antecedent).EndInit();
             ResumeLayout(false);

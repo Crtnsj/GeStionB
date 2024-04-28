@@ -25,7 +25,7 @@ namespace GeStionB.Patients
         private void button_AddPatient_Valid_Click(object sender, EventArgs e)
         {
             PatientDataAccess dataAccess = new PatientDataAccess();
-            dataAccess.CreatePatient(this.Box_AddPatient_Name.Text, this.Box_AddPatient_Prenom.Text, this.Combo_AddPatient_sexe.Text,this.date_AddPatient.Text);
+            dataAccess.CreatePatient(this.Box_AddPatient_Name.Text, this.Box_AddPatient_Prenom.Text, this.Combo_AddPatient_sexe.Text, this.date_AddPatient.Text);
             this.Close();
         }
 

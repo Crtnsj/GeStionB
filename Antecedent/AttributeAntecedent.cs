@@ -24,13 +24,13 @@ namespace GeStionB.Antecedent
         }
 
         private void AttributeAntecedent_Activated(object sender, EventArgs e)
-        {   
+        {
             //utilise la methode FillComboBox
             FillComboBox();
         }
 
         public void FillComboBox()
-        {   
+        {
             //utilise la methode FillComboBox de la classe antecedentDataAccess
             //avec la comboBox ciblee en parametre
             dataAccess.FillComboBox(combo_antecedents);
@@ -49,10 +49,10 @@ namespace GeStionB.Antecedent
 
         private void Btn_AddAntecedent_Click(object sender, EventArgs e)
         {
-            
-                AddAntecedent addAntecedent = new AddAntecedent();
-                addAntecedent.Show();
-            
+
+            AddAntecedent addAntecedent = new AddAntecedent();
+            addAntecedent.Show();
+
         }
     }
 }

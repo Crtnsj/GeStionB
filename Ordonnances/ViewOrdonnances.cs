@@ -65,5 +65,17 @@ namespace GeStionB.Ordonnances
             addOrdonnance addOrdonnance = new addOrdonnance(nom_m);
             addOrdonnance.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Accueil accueil = new Accueil(this.nom_m);
+            this.Hide();
+            accueil.Show();
+        }
+
+        private void ViewOrdonnances_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

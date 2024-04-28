@@ -43,38 +43,48 @@
             // 
             // box_AddMedecin_nom
             // 
-            box_AddMedecin_nom.Location = new Point(187, 215);
+            box_AddMedecin_nom.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            box_AddMedecin_nom.Location = new Point(43, 57);
+            box_AddMedecin_nom.Margin = new Padding(2, 2, 2, 2);
             box_AddMedecin_nom.Name = "box_AddMedecin_nom";
-            box_AddMedecin_nom.Size = new Size(225, 43);
+            box_AddMedecin_nom.Size = new Size(151, 37);
             box_AddMedecin_nom.TabIndex = 0;
             // 
             // box_AddMedecin_prenom
             // 
-            box_AddMedecin_prenom.Location = new Point(187, 334);
+            box_AddMedecin_prenom.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            box_AddMedecin_prenom.Location = new Point(43, 141);
+            box_AddMedecin_prenom.Margin = new Padding(2, 2, 2, 2);
             box_AddMedecin_prenom.Name = "box_AddMedecin_prenom";
-            box_AddMedecin_prenom.Size = new Size(225, 43);
+            box_AddMedecin_prenom.Size = new Size(151, 37);
             box_AddMedecin_prenom.TabIndex = 1;
             // 
             // box_AddMedecin_MDP
             // 
-            box_AddMedecin_MDP.Location = new Point(187, 616);
+            box_AddMedecin_MDP.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            box_AddMedecin_MDP.Location = new Point(43, 383);
+            box_AddMedecin_MDP.Margin = new Padding(2, 2, 2, 2);
             box_AddMedecin_MDP.Name = "box_AddMedecin_MDP";
-            box_AddMedecin_MDP.Size = new Size(225, 43);
+            box_AddMedecin_MDP.Size = new Size(151, 37);
             box_AddMedecin_MDP.TabIndex = 3;
             // 
             // box_AddMedecin_ID
             // 
-            box_AddMedecin_ID.Location = new Point(187, 527);
+            box_AddMedecin_ID.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            box_AddMedecin_ID.Location = new Point(43, 323);
+            box_AddMedecin_ID.Margin = new Padding(2, 2, 2, 2);
             box_AddMedecin_ID.Name = "box_AddMedecin_ID";
-            box_AddMedecin_ID.Size = new Size(225, 43);
+            box_AddMedecin_ID.Size = new Size(151, 37);
             box_AddMedecin_ID.TabIndex = 4;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(192, 161);
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(46, 21);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(76, 37);
+            label1.Size = new Size(61, 30);
             label1.TabIndex = 5;
             label1.Text = "Nom";
             label1.Click += label1_Click;
@@ -82,63 +92,75 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(192, 294);
+            label2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(46, 114);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(109, 37);
+            label2.Size = new Size(89, 30);
             label2.TabIndex = 6;
             label2.Text = "Prénom";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(187, 391);
+            label3.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(43, 201);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(557, 37);
+            label3.Size = new Size(456, 30);
             label3.TabIndex = 7;
             label3.Text = "Date de naissance format : (Année-Mois-Jour)";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(187, 487);
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(43, 296);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(138, 37);
+            label4.Size = new Size(110, 30);
             label4.TabIndex = 8;
             label4.Text = "Identifiant";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(187, 576);
+            label5.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(43, 356);
+            label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(176, 37);
+            label5.Size = new Size(144, 30);
             label5.TabIndex = 9;
             label5.Text = "Mot de passe";
             // 
             // btn_addMedecin_Valid
             // 
-            btn_addMedecin_Valid.Location = new Point(598, 755);
+            btn_addMedecin_Valid.BackColor = SystemColors.ControlLight;
+            btn_addMedecin_Valid.Location = new Point(254, 474);
+            btn_addMedecin_Valid.Margin = new Padding(2, 2, 2, 2);
             btn_addMedecin_Valid.Name = "btn_addMedecin_Valid";
-            btn_addMedecin_Valid.Size = new Size(324, 52);
+            btn_addMedecin_Valid.Size = new Size(245, 43);
             btn_addMedecin_Valid.TabIndex = 10;
             btn_addMedecin_Valid.Text = "Valider les informations";
-            btn_addMedecin_Valid.UseVisualStyleBackColor = true;
+            btn_addMedecin_Valid.UseVisualStyleBackColor = false;
             btn_addMedecin_Valid.Click += btn_addMedecin_Valid_Click;
             // 
             // date_AddMedecin
             // 
             date_AddMedecin.CustomFormat = "yyyy-MM-dd";
+            date_AddMedecin.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
             date_AddMedecin.Format = DateTimePickerFormat.Custom;
-            date_AddMedecin.Location = new Point(187, 441);
+            date_AddMedecin.Location = new Point(43, 235);
+            date_AddMedecin.Margin = new Padding(2, 2, 2, 2);
             date_AddMedecin.Name = "date_AddMedecin";
-            date_AddMedecin.Size = new Size(450, 43);
+            date_AddMedecin.Size = new Size(301, 37);
             date_AddMedecin.TabIndex = 11;
             // 
             // AddMedecin
             // 
-            AutoScaleDimensions = new SizeF(15F, 37F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(978, 862);
+            ClientSize = new Size(509, 527);
             Controls.Add(date_AddMedecin);
             Controls.Add(btn_addMedecin_Valid);
             Controls.Add(label5);
@@ -150,6 +172,7 @@
             Controls.Add(box_AddMedecin_MDP);
             Controls.Add(box_AddMedecin_prenom);
             Controls.Add(box_AddMedecin_nom);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "AddMedecin";
             Text = "Créer un médecin";
             ResumeLayout(false);

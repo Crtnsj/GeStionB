@@ -2021,19 +2021,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CRTNSJ\\.nuget\\packages\\": {}
+    "C:\\Users\\omsanjuanc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\backup\\GeStionB\\GeStionB.csproj",
+      "projectUniqueName": "C:\\Sites\\GeStionB\\GeStionB.csproj",
       "projectName": "GeStionB",
-      "projectPath": "C:\\backup\\GeStionB\\GeStionB.csproj",
-      "packagesPath": "C:\\Users\\CRTNSJ\\.nuget\\packages\\",
-      "outputPath": "C:\\backup\\GeStionB\\obj\\",
+      "projectPath": "C:\\Sites\\GeStionB\\GeStionB.csproj",
+      "packagesPath": "C:\\Users\\omsanjuanc\\.nuget\\packages\\",
+      "outputPath": "C:\\Sites\\GeStionB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\CRTNSJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\omsanjuanc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2087,24 +2087,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-arm64",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -2113,7 +2095,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -2122,7 +2104,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'BouncyCastle 1.8.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "message": "Le package 'BouncyCastle 1.8.9' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' au lieu du framework cible du projet 'net6.0-windows7.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
       "libraryId": "BouncyCastle",
       "targetGraphs": [
         "net6.0-windows7.0"
@@ -2132,7 +2114,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'iTextSharp 5.5.13.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "message": "Le package 'iTextSharp 5.5.13.3' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' au lieu du framework cible du projet 'net6.0-windows7.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
       "libraryId": "iTextSharp",
       "targetGraphs": [
         "net6.0-windows7.0"

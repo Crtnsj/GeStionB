@@ -34,28 +34,33 @@
             // 
             // Box_mdpAdmin
             // 
-            Box_mdpAdmin.Location = new Point(314, 278);
+            Box_mdpAdmin.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            Box_mdpAdmin.Location = new Point(207, 108);
+            Box_mdpAdmin.Margin = new Padding(2, 2, 2, 2);
             Box_mdpAdmin.Name = "Box_mdpAdmin";
-            Box_mdpAdmin.Size = new Size(225, 43);
+            Box_mdpAdmin.Size = new Size(151, 37);
             Box_mdpAdmin.TabIndex = 0;
             Box_mdpAdmin.KeyPress += Box_mdpAdmin_KeyPress;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(96, 191);
+            label1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(11, 42);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(706, 37);
+            label1.Size = new Size(578, 30);
             label1.TabIndex = 1;
             label1.Text = "Mot de passe administrateur, valider avec la touche entrée";
             // 
             // AdminValidation
             // 
-            AutoScaleDimensions = new SizeF(15F, 37F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(888, 453);
+            ClientSize = new Size(592, 173);
             Controls.Add(label1);
             Controls.Add(Box_mdpAdmin);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "AdminValidation";
             Text = "Validation administrateur";
             ResumeLayout(false);

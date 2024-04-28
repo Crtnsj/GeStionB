@@ -12,7 +12,7 @@ namespace GeStionB.Antecedent
 {
     public partial class ViewAntecedents : Form
     {
-        private int Id_p {  get; set; }
+        private int Id_p { get; set; }
         public ViewAntecedents(int id_p)
         {
             Id_p = id_p;

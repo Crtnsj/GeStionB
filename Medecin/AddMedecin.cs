@@ -34,6 +34,6 @@ namespace GeStionB.Medecin
             MessageBox.Show("Utilisateur crée");
         }
 
-        
+
     }
 }

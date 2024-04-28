@@ -21,7 +21,7 @@ namespace GeStionB.Ordonnances
             InitializeComponent();
             FillComboBoxMedicaments();
             FillComboBoxPatients();
-            
+
         }
         public void FillComboBoxMedicaments()
         {

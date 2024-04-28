@@ -25,19 +25,22 @@ namespace GeStionB
 
         private void gererLesPatiensToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ViewPatients viewPatients = new ViewPatients();
+            ViewPatients viewPatients = new ViewPatients(this.nom_m);
+            this.Hide();
             viewPatients.Show();
         }
 
         private void gererLesMedicamentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ViewMedicaments viewMedicaments = new ViewMedicaments();
+            ViewMedicaments viewMedicaments = new ViewMedicaments(this.nom_m);
+            this.Hide();
             viewMedicaments.Show();
         }
 
         private void gererLesOrdonnacToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ViewOrdonnances viewOrdonnances = new ViewOrdonnances(nom_m);
+            this.Hide();
             viewOrdonnances.Show();
         }
 

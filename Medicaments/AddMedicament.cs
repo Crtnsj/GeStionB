@@ -34,5 +34,10 @@ namespace GeStionB.Medicaments
             AddAntecedent addAntecedent = new AddAntecedent();
             addAntecedent.Show();
         }
+
+        private void AddMedicament_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

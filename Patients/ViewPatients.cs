@@ -15,11 +15,13 @@ namespace GeStionB
     public partial class ViewPatients : Form
     {
         private PatientDataAccess dataAccess = new PatientDataAccess();
-        public ViewPatients()
+        string nom_m = "";
+        public ViewPatients(string nom_m)
         {
             InitializeComponent();
             updateDataGridView();
             this.Activated += ViewPatients_Activated;
+            this.nom_m = nom_m;
         }
 
         private void ViewPatients_Activated(object sender, EventArgs e)
@@ -28,7 +30,7 @@ namespace GeStionB
         }
 
 
-        
+
 
         public void updateDataGridView()
         {
@@ -64,6 +66,23 @@ namespace GeStionB
         {
             AddPatient addPatient = new AddPatient();
             addPatient.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Accueil accueil = new Accueil(this.nom_m);
+            this.Hide();
+            accueil.Show();
+        }
+
+        private void ViewPatients_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

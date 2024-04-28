@@ -77,7 +77,6 @@
             label1.Size = new Size(138, 37);
             label1.TabIndex = 3;
             label1.Text = "Identifiant";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -135,7 +134,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginPage";
             Text = "Page de connexion";
-            Load += LoginPage_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);

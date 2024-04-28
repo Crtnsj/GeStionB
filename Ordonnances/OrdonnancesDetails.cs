@@ -28,7 +28,7 @@ namespace GeStionB.Ordonnances
             this.boxMedecin.Text = nom_m;
             FillComboBoxMedicaments(libelle_med);
             FillComboBoxPatients(nom_p);
-            
+
         }
 
         public void FillComboBoxMedicaments(string libelle_med)

@@ -27,10 +27,10 @@ namespace GeStionB.Medicaments
         }
 
         private void ManageMedicament_Activated(object sender, EventArgs e)
-            //appele les methodes pour remplir les combobox
+        //appele les methodes pour remplir les combobox
         {
             FillComboBoxAntecedents();
-            FillComboBoxAllergies();      
+            FillComboBoxAllergies();
             FillComboBoxMedicaments();
         }
         public void FillComboBoxMedicaments()
@@ -59,8 +59,8 @@ namespace GeStionB.Medicaments
 
         public void btn_Incompatibilite_valid_Click(object sender, EventArgs e)
         {
-            
-            dataAccessIncompatibilite.CreateIncompatibilite(this.combo_antecedents.Text,Id,this.combo_allergie.Text, this.combo_Medicaments.Text);
+
+            dataAccessIncompatibilite.CreateIncompatibilite(this.combo_antecedents.Text, Id, this.combo_allergie.Text, this.combo_Medicaments.Text);
             MessageBox.Show("Modification prise en compte");
         }
     }

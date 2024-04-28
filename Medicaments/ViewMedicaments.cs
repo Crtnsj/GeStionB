@@ -16,12 +16,13 @@ namespace GeStionB.Medicaments
     public partial class ViewMedicaments : Form
     {
         private MedicamentsDataAccess dataAccess = new MedicamentsDataAccess();
-        public ViewMedicaments()
+        string nom_m = "";
+        public ViewMedicaments(string nom_m)
         {
             InitializeComponent();
             updateDataGridView();
             this.Activated += ViewPatients_Activated;
-
+            this.nom_m = nom_m;
         }
 
         private void ViewPatients_Activated(object sender, EventArgs e)
@@ -40,8 +41,8 @@ namespace GeStionB.Medicaments
                 DataGridViewRow selectedRow = this.MedicamentGridView.Rows[e.RowIndex];
                 int id = Convert.ToInt32(selectedRow.Cells["ID"].Value);
                 string libelle = selectedRow.Cells["Libelle"].Value.ToString();
-                
-          
+
+
                 MedicamentsDetails patientDetail = new MedicamentsDetails(id, libelle);
                 patientDetail.Show();
             }
@@ -49,8 +50,25 @@ namespace GeStionB.Medicaments
 
         private void Button_addMedicament_Click(object sender, EventArgs e)
         {
-           AddMedicament addMedicament = new AddMedicament();
+            AddMedicament addMedicament = new AddMedicament();
             addMedicament.Show();
+        }
+
+        private void ViewMedicaments_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Accueil accueil = new Accueil(this.nom_m);
+            this.Hide();
+            accueil.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

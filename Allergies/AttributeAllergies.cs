@@ -35,7 +35,7 @@ namespace GeStionB.Allergies
 
         private void btn_attributeAllergies_valid_Click(object sender, EventArgs e)
         {
-            
+
             dataAccess.AttributeAllergie(this.Id_p, this.combo_Allergies.Text);
             this.Close();
         }
@@ -46,6 +46,9 @@ namespace GeStionB.Allergies
             addAllergies.Show();
         }
 
-        
+        private void label_attributeAllergies_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

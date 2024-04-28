@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAntecedent));
             label_libelleAntecedent = new Label();
             Box_addAntecedent_libelle = new TextBox();
             btn_ajoutAntecedent = new Button();
@@ -36,39 +37,49 @@
             // label_libelleAntecedent
             // 
             label_libelleAntecedent.AutoSize = true;
-            label_libelleAntecedent.Location = new Point(192, 187);
+            label_libelleAntecedent.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            label_libelleAntecedent.Location = new Point(62, 39);
+            label_libelleAntecedent.Margin = new Padding(2, 0, 2, 0);
             label_libelleAntecedent.Name = "label_libelleAntecedent";
-            label_libelleAntecedent.Size = new Size(284, 37);
+            label_libelleAntecedent.Size = new Size(230, 30);
             label_libelleAntecedent.TabIndex = 0;
             label_libelleAntecedent.Text = "Libelle de l'antecedent";
             // 
             // Box_addAntecedent_libelle
             // 
-            Box_addAntecedent_libelle.Location = new Point(199, 293);
+            Box_addAntecedent_libelle.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            Box_addAntecedent_libelle.Location = new Point(98, 108);
+            Box_addAntecedent_libelle.Margin = new Padding(2, 2, 2, 2);
             Box_addAntecedent_libelle.Name = "Box_addAntecedent_libelle";
-            Box_addAntecedent_libelle.Size = new Size(225, 43);
+            Box_addAntecedent_libelle.Size = new Size(151, 37);
             Box_addAntecedent_libelle.TabIndex = 1;
             // 
             // btn_ajoutAntecedent
             // 
-            btn_ajoutAntecedent.Location = new Point(717, 748);
+            btn_ajoutAntecedent.BackColor = SystemColors.ControlLight;
+            btn_ajoutAntecedent.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_ajoutAntecedent.Location = new Point(82, 194);
+            btn_ajoutAntecedent.Margin = new Padding(2, 2, 2, 2);
             btn_ajoutAntecedent.Name = "btn_ajoutAntecedent";
-            btn_ajoutAntecedent.Size = new Size(273, 52);
+            btn_ajoutAntecedent.Size = new Size(188, 49);
             btn_ajoutAntecedent.TabIndex = 2;
             btn_ajoutAntecedent.Text = "Valider la création";
-            btn_ajoutAntecedent.UseVisualStyleBackColor = true;
+            btn_ajoutAntecedent.UseVisualStyleBackColor = false;
             btn_ajoutAntecedent.Click += btn_ajoutAntecedent_Click;
             // 
             // AddAntecedent
             // 
-            AutoScaleDimensions = new SizeF(15F, 37F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1046, 865);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(368, 302);
             Controls.Add(btn_ajoutAntecedent);
             Controls.Add(Box_addAntecedent_libelle);
             Controls.Add(label_libelleAntecedent);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2, 2, 2, 2);
             Name = "AddAntecedent";
-            Text = "AddAntecedent";
+            Text = "Créer un antécédent";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -98,7 +98,11 @@ namespace GeStionB.Patients
                 using (MySqlCommand command = new MySqlCommand(query, conn))
                 {
                     command.Parameters.AddWithValue("@id_p", patientId);
-                    command.ExecuteNonQuery();
+                    try { command.ExecuteNonQuery(); }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show("L'utilisateur ne peut-être supprimeé car il est concerné par une ordonnance");
+                    }
                 }
                 conn.Close();
             }
